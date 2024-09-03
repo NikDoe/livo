@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Livo
 
-## Getting Started
+This project is based on Next.js and aims to create a multifunctional website. At this stage, the boilerplate code from the Next.js starter template has been removed.
 
-First, run the development server:
+## Description
+
+Livo is designed to offer a range of services including accommodation rental, car rentals, flight bookings, and tourist experiences. The project is currently in its early stages, and all default files and settings have been cleared from the starter template.
+
+## Key Features
+
+- Accommodation Rental
+- Car Rentals
+- Flight Bookings
+- Tourist Experiences
+
+## Current Tasks
+
+- Developing application architecture
+- Setting up and configuring basic components
+- Implementing user interfaces and functionalities
+
+## Development Plan
+
+1. Create pages for different services
+2. Integrate with external APIs
+3. Implement search and filtering functionality
+4. Add authentication and authorization system
+5. Refine interfaces and user experience
+
+## Installation
+
+To install the project dependencies, run:
+
+```bash
+npm install
+```
+
+To run the project in development mode, use:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+If you have any questions, you can reach me at:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Email: [nikd0e@yandex.ru](mailto:nikd0e@yandex.ru)
+- Telegram: [@nikdoe](https://t.me/nikdoe)
