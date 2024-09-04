@@ -32,3 +32,12 @@ jobs:
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          title: 'Automated release'
+          body: 'This PR is automatically created by GitHub Actions for releasing new changes.'
+          base: 'main'
+          branch: 'release/next'
