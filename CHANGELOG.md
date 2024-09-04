@@ -1,3 +1,10 @@
+# 1.0.0 (2024-09-04)
+
+
+### Bug Fixes
+
+* update CI config to use GitHub token ([1e7bf98](https://github.com/NikDoe/livo/commit/1e7bf985c1650bd2139d074bdd8b086f8e13d45a))
+
 # Changelog
 
 ## [1.0.0] - 2024-09-03
