@@ -1,7 +1,7 @@
 function page() {
 	return (
 		<h1>
-			TEST PAGE
+			TEST PAGE 👽
 		</h1>
 	);
 }
