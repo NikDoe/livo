@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/NikDoe/livo/compare/v1.1.0...v1.2.0) (2024-09-04)
+
+
+### Features
+
+* add pull request template ([5411a8b](https://github.com/NikDoe/livo/commit/5411a8b80b40e77953d94031e457f8ee3d94bece))
+
 # [1.1.0](https://github.com/NikDoe/livo/compare/v1.0.0...v1.1.0) (2024-09-04)
 
 
