@@ -16,21 +16,14 @@ Thank you for considering contributing to Livo! To ensure a smooth contribution 
 
 4. **Commit your changes**: Use clear and concise commit messages following this format:
 
-<div style="background-color: #f0f0f0; padding: 10px; color: #222222;">
-type: short description
-</div>
-<div style="background-color: #f0f0f0; padding: 10px; color: #222222;">
-Detailed explanation of the changes made. Why were these changes necessary? What issue does it resolve? Include any relevant context.
-</div>
+	- **Type:** short description
+	- **Details:** Detailed explanation of the changes made. Why were these changes necessary? What issue does it resolve? Include any relevant context.
 
-Example commit message:
+	### Example Commit Message
 
-<div style="background-color: #f0f0f0; padding: 10px; color: #222222;">
-chore: remove boilerplate code from Next.js starter template
-</div>
-<div style="background-color: #f0f0f0; padding: 10px; color: #222222;">
-Removed default boilerplate code to start with a clean slate for project development.
-</div>
+	**chore:** remove boilerplate code from Next.js starter template
+
+	Removed default boilerplate code to start with a clean slate for project development.
 
 5. **Push your changes**: Push your changes to your forked repository.
 
