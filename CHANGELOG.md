@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/NikDoe/livo/compare/v1.0.0...v1.1.0) (2024-09-04)
+
+
+### Features
+
+* add test page ([4636791](https://github.com/NikDoe/livo/commit/46367916a85647fffe92a76ee34efd34ebf25cf4))
+
 # 1.0.0 (2024-09-04)
 
 
