@@ -31,7 +31,15 @@ jobs:
       - name: Release
         run: npm run release
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      # Создание ветки для release, если требуется
+      - name: Create Release Branch
+        run: |
+          git checkout -b release/next
+          git push origin release/next
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
