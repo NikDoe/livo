@@ -17,6 +17,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Debug Ref
+        run: |  
+          echo "GitHub ref: ${{ github.ref }}"
+
       - name: Clear npm cache
         run: npm cache clean --force
 
