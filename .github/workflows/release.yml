@@ -39,8 +39,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Release
-        if: github.ref == 'refs/heads/release/next'
+      - name: Run Release
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
