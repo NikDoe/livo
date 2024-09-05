@@ -25,6 +25,9 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install dependencies
+        run: npm install
+
       - name: Create or Update Release Branch
         if: github.ref == 'refs/heads/main'
         run: |
