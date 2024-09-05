@@ -32,6 +32,12 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Debug Git Status
+        run: |
+          git fetch origin
+          git status
+          git log --oneline -n 10
+
       - name: Create or Update Release Branch
         if: github.ref == 'refs/heads/main'
         run: |
