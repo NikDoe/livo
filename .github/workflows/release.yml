@@ -25,16 +25,24 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Create Release Branch
+      - name: Install dependencies
+        run: npm install
+
+      - name: Create or Update Release Branch
         if: github.ref == 'refs/heads/main'
         run: |
-          git checkout -b release/next
-          git push origin release/next
+          git fetch origin
+          if git show-ref --verify --quiet refs/remotes/origin/release/next; then
+            git checkout release/next
+            git pull origin release/next
+          else
+            git checkout -b release/next
+            git push origin release/next
+          fi
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
-      - name: Release
-        if: github.ref == 'refs/heads/release/next'
+      - name: Run Release
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
