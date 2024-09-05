@@ -1,5 +1,5 @@
 function page() {
-	console.log('new test');
+	console.log('test');
 
 	return (
 		<h1 className='text-3xl'>
