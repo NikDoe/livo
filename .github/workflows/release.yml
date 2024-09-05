@@ -42,13 +42,8 @@ jobs:
         if: github.ref == 'refs/heads/main'
         run: |
           git fetch origin
-          git checkout -B main origin/main
-          if git show-ref --verify --quiet refs/remotes/origin/release/next; then
-            git checkout -B release/next origin/release/next
-          else
-            git checkout -b release/next
-            git push origin release/next
-          fi
+          git checkout -B release/next origin/release/next || git checkout -b release/next
+          git pull origin release/next || git push origin release/next
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
