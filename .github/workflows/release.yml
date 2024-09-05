@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 jobs:
   release:
@@ -14,15 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
-
-      - name: Debug Ref
-        run: |  
-          echo "GitHub ref: ${{ github.ref }}"
-
-      - name: Clear npm cache
-        run: npm cache clean --force
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -32,35 +22,7 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Debug Git Status
-        run: |
-          git fetch origin
-          git status
-          git log --oneline -n 10
-
-      - name: Create or Update Release Branch
-        if: github.ref == 'refs/heads/main'
-        run: |
-          git fetch origin
-          git checkout -B release/next origin/release/next || git checkout -b release/next
-          git pull origin release/next || git push origin release/next
+      - name: Run Semantic Release
+        run: npx semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Run Release
-        if: github.ref == 'refs/heads/main'
-        run: | 
-          git checkout release/next
-          npm run release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-
-      - name: Create Pull Request
-        if: github.ref == 'refs/heads/main'
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-          title: 'Automated release'
-          body: 'This PR is automatically created by GitHub Actions for releasing new changes.'
-          base: 'main'
-          branch: 'release/next'

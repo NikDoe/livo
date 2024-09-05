@@ -1,8 +1,7 @@
 {
 	"repositoryUrl": "https://github.com/NikDoe/livo.git",
 	"branches": [
-		"main",
-		"release/next"
+		"main"
 	],
 	"plugins": [
 		"@semantic-release/commit-analyzer",
