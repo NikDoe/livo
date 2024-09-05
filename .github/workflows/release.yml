@@ -43,11 +43,13 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Run Release
+        if: github.ref == 'refs/heads/release/next'
         run: npm run release
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
 
       - name: Create Pull Request
+        if: github.ref == 'refs/heads/release/next'
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.GH_TOKEN }}
