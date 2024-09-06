@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/NikDoe/livo/compare/v1.3.3...v1.4.0) (2024-09-06)
+
+
+### Features
+
+* add new feature ([ca8099a](https://github.com/NikDoe/livo/commit/ca8099adb956d0f4bb1b7c93e421350aaad03428))
+
 ## [1.3.3](https://github.com/NikDoe/livo/compare/v1.3.2...v1.3.3) (2024-09-06)
 
 
