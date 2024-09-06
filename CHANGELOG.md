@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/NikDoe/livo/compare/v1.4.0...v1.4.1) (2024-09-06)
+
+
+### Bug Fixes
+
+* Update page.tsx ([#49](https://github.com/NikDoe/livo/issues/49)) ([cd6747a](https://github.com/NikDoe/livo/commit/cd6747acdc9f8095ca374c3b0708ae1451ec0380))
+
 # [1.4.0](https://github.com/NikDoe/livo/compare/v1.3.3...v1.4.0) (2024-09-06)
 
 
