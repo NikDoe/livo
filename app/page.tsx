@@ -1,7 +1,5 @@
 function page() {
-	console.log('test 👽');
-	console.log('add new feature');
-	console.log('add new feature');
+	console.log('NikDoe second account new feat');
 
 	return (
 		<h1 className='text-3xl'>
