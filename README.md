@@ -13,6 +13,26 @@ Livo is designed to offer a range of services including accommodation rental, ca
 - Flight Bookings
 - Tourist Experiences
 
+## UI Components
+
+The project uses [shadcn/ui](https://github.com/shadcn/ui) to provide a consistent and customizable set of UI components. The following components have been installed and are ready for use:
+
+- Accordion
+- Breadcrumb
+- Button
+- Checkbox
+- Dropdown Menu
+- Input
+- Pagination
+- Select
+- Separator
+- Switch
+- Tabs
+- Textarea
+- Toast
+
+For more details on how to use these components, refer to the official [shadcn/ui documentation](https://shadcn.dev/docs/components).
+
 ## Current Tasks
 
 - Developing application architecture
