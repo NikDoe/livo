@@ -8,7 +8,7 @@ function MainMenu() {
 
 			<MainPagesDropDown />
 
-			<div className='flex'>
+			<div className='flex space-x-6'>
 				<Button asChild variant='ghost'>
 					<Link href='/support'>Поддержка</Link>
 				</Button>
