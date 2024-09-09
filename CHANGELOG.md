@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/NikDoe/livo/compare/v1.5.0...v1.6.0) (2024-09-09)
+
+
+### Features
+
+* add navigation template and update UI ([#55](https://github.com/NikDoe/livo/issues/55)) ([a624124](https://github.com/NikDoe/livo/commit/a62412470920f6fb51b3ace5bbd58cb2c61577e3))
+
 # [1.5.0](https://github.com/NikDoe/livo/compare/v1.4.1...v1.5.0) (2024-09-06)
 
 
