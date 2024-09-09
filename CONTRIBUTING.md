@@ -22,12 +22,35 @@ Thank you for considering contributing to Livo! To ensure a smooth contribution 
 
 ---
 
-4. **Commit your changes**: Use clear and concise commit messages following this format:
+4. **Add new UI components**: If you are adding new UI components, follow these steps:
+
+- Install `shadcn/ui` (if not already installed):
+	
+```bash
+	npx shadcn-ui@latest init
+```
+
+- Add new components using the CLI:
+
+```bash
+   npx shadcn-ui add <component-name>
+```
+
+Replace `<component-name>` with the name of the component you want to add (e.g., button, input, etc.).
+
+- Update Documentation:
+
+	- `README.md:` Add details about the new components, including usage examples.
+	- `UI_COMPONENTS.md` (if exists): Update with details of the newly added components.
+
+---
+
+5. **Commit your changes**: Use clear and concise commit messages following this format:
 
 	- `Type:` short description
 	- `Details:` Detailed explanation of the changes made. Why were these changes necessary? What issue does it resolve? Include any relevant context.
 
-	## Example Commit Message
+	### Example Commit Message
 
 	**chore:** remove boilerplate code from Next.js starter template
 

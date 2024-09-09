@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/NikDoe/livo/compare/v1.4.1...v1.5.0) (2024-09-06)
+
+
+### Features
+
+* add shadcn/ui with selected components ([0ca196b](https://github.com/NikDoe/livo/commit/0ca196bb1abe754d5d33e6dd6c6e6732d42a759b))
+
 ## [1.4.1](https://github.com/NikDoe/livo/compare/v1.4.0...v1.4.1) (2024-09-06)
 
 
