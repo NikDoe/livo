@@ -12,7 +12,7 @@ function MainMenu() {
 				<Button asChild variant='ghost'>
 					<Link href='/support'>Поддержка</Link>
 				</Button>
-				<Button asChild>
+				<Button asChild variant='outline'>
 					<Link href='/stays/create-stay'>Разместить жильё</Link>
 				</Button>
 			</div>
