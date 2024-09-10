@@ -1,3 +1,23 @@
+## [1.7.1](https://github.com/NikDoe/livo/compare/v1.7.0...v1.7.1) (2024-09-10)
+
+
+### Bug Fixes
+
+* refactor text language in dark mode ([3814203](https://github.com/NikDoe/livo/commit/3814203680d8a5da4200cd307b54d57289228650))
+
+# [1.7.0](https://github.com/NikDoe/livo/compare/v1.6.0...v1.7.0) (2024-09-10)
+
+
+### Bug Fixes
+
+* adjust spacing between buttons ([085409c](https://github.com/NikDoe/livo/commit/085409cfd4fda4a1597dd700faa4b87f76aef05c))
+
+
+### Features
+
+* add footer with dark mode and links to pages ([03fdf3a](https://github.com/NikDoe/livo/commit/03fdf3a43d1a5511426bf9667ff472faf6c6ca30))
+* add navigation template and update UI ([9051442](https://github.com/NikDoe/livo/commit/9051442772dbdd516bdd555bd88cfed02c8f566b))
+
 # [1.6.0](https://github.com/NikDoe/livo/compare/v1.5.0...v1.6.0) (2024-09-09)
 
 
