@@ -3,6 +3,9 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 
 import Navbar from '@/components/navbar/Navbar';
+import Footer from '@/components/footer/Footer';
+import { Separator } from '@/components/ui/separator';
+import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,12 +20,16 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en'>
+		<html lang='en' suppressHydrationWarning>
 			<body className={inter.className}>
-				<Navbar />
-				<main className='container'>
-					{children}
-				</main>
+				<Providers>
+					<Navbar />
+					<main className='container py-6'>
+						{children}
+					</main>
+					<Separator />
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);
