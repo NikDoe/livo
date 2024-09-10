@@ -29,13 +29,13 @@ function DarkMode() {
 				</DropdownMenuTrigger>
 				<DropdownMenuContent align='end'>
 					<DropdownMenuItem onClick={() => setTheme('light')}>
-						Light
+						Светлая
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => setTheme('dark')}>
-						Dark
+						Тёмная
 					</DropdownMenuItem>
 					<DropdownMenuItem onClick={() => setTheme('system')}>
-						System
+						Системная
 					</DropdownMenuItem>
 				</DropdownMenuContent>
 			</DropdownMenu>
