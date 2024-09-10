@@ -1,3 +1,10 @@
+# [1.8.0](https://github.com/NikDoe/livo/compare/v1.7.1...v1.8.0) (2024-09-10)
+
+
+### Features
+
+* add dropdown for main pages in navbar ([8067346](https://github.com/NikDoe/livo/commit/80673469a1907e6d03cfa5dafa181b19cd2cdffa))
+
 ## [1.7.1](https://github.com/NikDoe/livo/compare/v1.7.0...v1.7.1) (2024-09-10)
 
 
