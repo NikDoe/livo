@@ -1,3 +1,10 @@
+# [1.9.0](https://github.com/NikDoe/livo/compare/v1.8.0...v1.9.0) (2024-09-10)
+
+
+### Features
+
+* add user dropdown and update button ([0bf1691](https://github.com/NikDoe/livo/commit/0bf16912a622ba24c1464c68949e94ab83042d8b))
+
 # [1.8.0](https://github.com/NikDoe/livo/compare/v1.7.1...v1.8.0) (2024-09-10)
 
 

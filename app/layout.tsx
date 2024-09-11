@@ -5,6 +5,8 @@ import './globals.css';
 import Navbar from '@/components/navbar/Navbar';
 import Footer from '@/components/footer/Footer';
 import { Separator } from '@/components/ui/separator';
+
+import { ClerkProvider } from '@clerk/nextjs';
 import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
@@ -20,17 +22,19 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='en' suppressHydrationWarning>
-			<body className={inter.className}>
-				<Providers>
-					<Navbar />
-					<main className='container py-6'>
-						{children}
-					</main>
-					<Separator />
-					<Footer />
-				</Providers>
-			</body>
-		</html>
+		<ClerkProvider>
+			<html lang='en' suppressHydrationWarning>
+				<body className={inter.className}>
+					<Providers>
+						<Navbar />
+						<main className='container py-6'>
+							{children}
+						</main>
+						<Separator />
+						<Footer />
+					</Providers>
+				</body>
+			</html>
+		</ClerkProvider>
 	);
 }
