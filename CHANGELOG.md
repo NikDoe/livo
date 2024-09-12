@@ -1,3 +1,10 @@
+## [1.14.1](https://github.com/NikDoe/livo/compare/v1.14.0...v1.14.1) (2024-09-12)
+
+
+### Reverts
+
+* Revert "test github achivments [#2](https://github.com/NikDoe/livo/issues/2) ([#75](https://github.com/NikDoe/livo/issues/75))" ([#76](https://github.com/NikDoe/livo/issues/76)) ([3123f26](https://github.com/NikDoe/livo/commit/3123f26224f93169bc771e342aef564850efad87))
+
 # [1.14.0](https://github.com/NikDoe/livo/compare/v1.13.0...v1.14.0) (2024-09-12)
 
 
