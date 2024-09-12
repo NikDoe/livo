@@ -7,7 +7,7 @@ type UserProfileProps = {
 function UserProfile({ params }: UserProfileProps) {
 	return (
 		<h1>
-			Пользовател - {params.userId}
+			Пользователь - {params.userId}
 		</h1>
 	);
 }
