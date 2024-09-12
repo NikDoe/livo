@@ -1,5 +1,16 @@
+import PageContainer from '@/components/accountPage/page-container';
+import ProfileForm from '@/components/accountPage/ProfileForm';
+
 function AccountPage() {
-	return <h1 className='text-3xl'>AccountPage</h1>;
+	return (
+		<PageContainer
+			isProfileForm
+			pageTitle='Личная информация'
+			pageDescription='Так вас будут видеть другие пользователи на сайте.'
+		>
+			<ProfileForm />
+		</PageContainer>
+	);
 }
 
 export default AccountPage;
