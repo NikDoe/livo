@@ -1,3 +1,10 @@
+# [1.12.0](https://github.com/NikDoe/livo/compare/v1.11.0...v1.12.0) (2024-09-12)
+
+
+### Features
+
+* add reusable form components and types ([26ba553](https://github.com/NikDoe/livo/commit/26ba553a623cdc789b79777a7fa7818e6f7d5ed7))
+
 # [1.11.0](https://github.com/NikDoe/livo/compare/v1.10.0...v1.11.0) (2024-09-12)
 
 
