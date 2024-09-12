@@ -1,3 +1,10 @@
+# [1.11.0](https://github.com/NikDoe/livo/compare/v1.10.0...v1.11.0) (2024-09-12)
+
+
+### Features
+
+* add account subpages and components ([6e981f9](https://github.com/NikDoe/livo/commit/6e981f9f42bd332adef12a80ff6de5e93932eab7))
+
 # [1.10.0](https://github.com/NikDoe/livo/compare/v1.9.0...v1.10.0) (2024-09-11)
 
 
