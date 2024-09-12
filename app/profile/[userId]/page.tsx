@@ -5,6 +5,8 @@ type UserProfileProps = {
 }
 
 function UserProfile({ params }: UserProfileProps) {
+	console.log('test github');
+	
 	return (
 		<h1>
 			Пользователь - {params.userId}
