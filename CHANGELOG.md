@@ -1,3 +1,10 @@
+# [1.13.0](https://github.com/NikDoe/livo/compare/v1.12.0...v1.13.0) (2024-09-12)
+
+
+### Features
+
+* add loading spinners for pages & subpages ([e6cf4c3](https://github.com/NikDoe/livo/commit/e6cf4c3f0bc7af2bb41768ec6a7f92bc5474f8ab))
+
 # [1.12.0](https://github.com/NikDoe/livo/compare/v1.11.0...v1.12.0) (2024-09-12)
 
 
