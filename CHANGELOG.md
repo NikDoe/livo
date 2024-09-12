@@ -1,3 +1,15 @@
+# [1.14.0](https://github.com/NikDoe/livo/compare/v1.13.0...v1.14.0) (2024-09-12)
+
+
+### Bug Fixes
+
+* Update page.tsx ([c3b84b2](https://github.com/NikDoe/livo/commit/c3b84b2bc36bd259113f638fa77680963afef685))
+
+
+### Features
+
+* add profile creation w/ zod and protected routes ([c7c4457](https://github.com/NikDoe/livo/commit/c7c44570e125b75915af0c09d2f0b9ceabdcf671))
+
 # [1.13.0](https://github.com/NikDoe/livo/compare/v1.12.0...v1.13.0) (2024-09-12)
 
 
