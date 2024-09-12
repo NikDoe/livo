@@ -5,7 +5,7 @@ type UserProfileProps = {
 }
 
 function UserProfile({ params }: UserProfileProps) {
-	console.log('test github achivments👽');
+	console.log('test github achivments 2👽');
 	
 	return (
 		<h1>
