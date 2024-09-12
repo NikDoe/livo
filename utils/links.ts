@@ -18,3 +18,10 @@ export const mainPageslinks: NavLink[] = [
 	{ href: '/flights', label: 'Авиабилеты', icon: PiAirplaneLight },
 	{ href: '/stays', label: 'Аренда жилья', icon: PiHouseThin },
 ];
+
+export const accountSidebarNavLinks: Omit<NavLink, 'icon'>[] = [
+	{ href: '/account', label: 'Личная информация' },
+	{ href: '/account/security', label: 'Безопасность' },
+	{ href: '/account/payments', label: 'Способы оплаты' },
+	{ href: '/account/notifications', label: 'Оповещения' },
+];

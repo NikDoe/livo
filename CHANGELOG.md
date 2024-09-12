@@ -1,3 +1,10 @@
+# [1.10.0](https://github.com/NikDoe/livo/compare/v1.9.0...v1.10.0) (2024-09-11)
+
+
+### Features
+
+* add auth system using Clerk ([c8797a3](https://github.com/NikDoe/livo/commit/c8797a39ab294406fc05ad2be6aaabe036b6433d))
+
 # [1.9.0](https://github.com/NikDoe/livo/compare/v1.8.0...v1.9.0) (2024-09-10)
 
 
