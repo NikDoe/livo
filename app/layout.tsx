@@ -24,10 +24,10 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang='en' suppressHydrationWarning>
-				<body className={inter.className}>
+				<body className={`${inter.className} min-h-screen flex flex-col`}>
 					<Providers>
 						<Navbar />
-						<main className='container py-16 lg:py-20'>
+						<main className='container py-16 lg:py-20 flex-1'>
 							{children}
 						</main>
 						<Separator />

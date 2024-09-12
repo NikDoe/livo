@@ -14,7 +14,7 @@ function PageContainer(props: PageContainerProps) {
 
 	const profileButton = (
 		<Button asChild variant='outline'>
-			<Link href='/profile'>Просмотреть профиль</Link>
+			<Link href='/profile/1'>Просмотреть профиль</Link>
 		</Button>
 	);
 
