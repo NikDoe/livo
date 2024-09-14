@@ -1,3 +1,12 @@
+# [1.16.0](https://github.com/NikDoe/livo/compare/v1.15.0...v1.16.0) (2024-09-14)
+
+
+### Features
+
+* profile creation with Prisma ([6340b36](https://github.com/NikDoe/livo/commit/6340b36efd843f3fdbe1b2a3d4ad28fdcb194607)), closes [#74](https://github.com/NikDoe/livo/issues/74)
+* profile creation with Prisma ([2ffbbdd](https://github.com/NikDoe/livo/commit/2ffbbdd9f0db9a0072d356fcb770f10ac7cfe004)), closes [#74](https://github.com/NikDoe/livo/issues/74)
+* profile creation with Prisma ([b216068](https://github.com/NikDoe/livo/commit/b2160681f44e25faecf537bf90e94e8dde9d29fb)), closes [#74](https://github.com/NikDoe/livo/issues/74)
+
 # [1.15.0](https://github.com/NikDoe/livo/compare/v1.14.1...v1.15.0) (2024-09-14)
 
 

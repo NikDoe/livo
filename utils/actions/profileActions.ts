@@ -6,6 +6,8 @@ import { profileSchema, validateWithZodSchema } from '../schemas';
 import { redirect } from 'next/navigation';
 import { renderError } from './actionHelpers';
 
+console.log('тестовая фича');
+
 export const createProfileAction = async (
 	prevState: any,
 	formData: FormData
