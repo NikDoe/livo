@@ -23,7 +23,7 @@ function CreateProfilePage() {
 							placeholder='Введите ваше реальное имя'
 						/>
 					</div>
-					<SubmitButton text='Create Profile' className='mt-10' />
+					<SubmitButton text='Создать профиль' className='mt-10' />
 				</FormContainer>
 			</div>
 		</section>
