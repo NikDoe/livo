@@ -1,3 +1,15 @@
+# [1.15.0](https://github.com/NikDoe/livo/compare/v1.14.1...v1.15.0) (2024-09-14)
+
+
+### Features
+
+* integrate Prisma with Supabase connection ([8b86c0e](https://github.com/NikDoe/livo/commit/8b86c0e1e55c198238da1f2059484c7ab131d6cd))
+
+
+### Reverts
+
+* Revert "test github achivments [#2](https://github.com/NikDoe/livo/issues/2) ([#75](https://github.com/NikDoe/livo/issues/75))" ([#76](https://github.com/NikDoe/livo/issues/76)) ([25546ca](https://github.com/NikDoe/livo/commit/25546caba1505067b82759ee68b72c9bd0e5dcaa))
+
 ## [1.14.1](https://github.com/NikDoe/livo/compare/v1.14.0...v1.14.1) (2024-09-12)
 
 
