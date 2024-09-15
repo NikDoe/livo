@@ -1,3 +1,10 @@
+## [1.18.1](https://github.com/NikDoe/livo/compare/v1.18.0...v1.18.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* signout, create profile, routes access ([3b8b071](https://github.com/NikDoe/livo/commit/3b8b0713ef77399ab8da9beb4460ea59e0fa43b8))
+
 # [1.18.0](https://github.com/NikDoe/livo/compare/v1.17.1...v1.18.0) (2024-09-15)
 
 
