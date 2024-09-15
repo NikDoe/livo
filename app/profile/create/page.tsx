@@ -2,8 +2,14 @@ import FormContainer from '@/components/form/FormContainer';
 import FormInput from '@/components/form/FormInput';
 import { SubmitButton } from '@/components/form/SubmitButton';
 import { createProfileAction } from '@/utils/actions';
+import { currentUser } from '@clerk/nextjs/server';
+import { redirect } from 'next/navigation';
 
-function CreateProfilePage() {
+async function CreateProfilePage() {
+	const user = await currentUser();
+
+	if (user?.privateMetadata?.hasProfile) redirect('/cars');
+
 	return (
 		<section>
 			<h3 className='text-3xl mb-8'>Создание профиля</h3>
