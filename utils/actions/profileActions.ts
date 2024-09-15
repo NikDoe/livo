@@ -6,8 +6,6 @@ import { profileSchema, validateWithZodSchema } from '../schemas';
 import { redirect } from 'next/navigation';
 import { renderError } from './actionHelpers';
 
-console.log('тестовая фича');
-
 export const createProfileAction = async (
 	prevState: any,
 	formData: FormData
@@ -37,4 +35,19 @@ export const createProfileAction = async (
 	}
 
 	redirect('/?accountCreated=true');
+};
+
+export const fetchProfileImage = async () => {
+	const user = await currentUser();
+	if (!user) return null;
+
+	const profile = await db.profile.findUnique({
+		where: {
+			clerkId: user.id,
+		},
+		select: {
+			profileImage: true,
+		},
+	});
+	return profile?.profileImage;
 };

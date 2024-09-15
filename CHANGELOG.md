@@ -1,3 +1,10 @@
+# [1.17.0](https://github.com/NikDoe/livo/compare/v1.16.0...v1.17.0) (2024-09-14)
+
+
+### Features
+
+* display user icon when logged in ([1060858](https://github.com/NikDoe/livo/commit/1060858e30b7f690c91975c05ad1d3d229b8dead))
+
 # [1.16.0](https://github.com/NikDoe/livo/compare/v1.15.0...v1.16.0) (2024-09-14)
 
 
