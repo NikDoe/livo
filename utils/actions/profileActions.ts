@@ -4,15 +4,14 @@ import db from '../db';
 import { clerkClient, currentUser } from '@clerk/nextjs/server';
 import { profileSchema, validateWithZodSchema } from '../schemas';
 import { redirect } from 'next/navigation';
-import { renderError } from './actionHelpers';
+import { getAuthUser, renderError } from './actionHelpers';
 
 export const createProfileAction = async (
 	prevState: any,
 	formData: FormData
 ) => {
 	try {
-		const user = await currentUser();
-		if (!user) throw new Error('Пожалуйста, войдите в аккаунт для создания профиля');
+		const user = await getAuthUser();
 
 		const rawData = Object.fromEntries(formData);
 		const validatedFields = validateWithZodSchema(profileSchema, rawData);
@@ -39,6 +38,7 @@ export const createProfileAction = async (
 
 export const fetchProfileImage = async () => {
 	const user = await currentUser();
+
 	if (!user) return null;
 
 	const profile = await db.profile.findUnique({
@@ -49,5 +49,6 @@ export const fetchProfileImage = async () => {
 			profileImage: true,
 		},
 	});
+
 	return profile?.profileImage;
 };
