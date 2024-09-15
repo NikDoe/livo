@@ -1,3 +1,10 @@
+## [1.17.1](https://github.com/NikDoe/livo/compare/v1.17.0...v1.17.1) (2024-09-15)
+
+
+### Bug Fixes
+
+* allow users with profile to access profile creation ([051921c](https://github.com/NikDoe/livo/commit/051921c43b5774616b7a157f8d43de9f9fa9d3b3))
+
 # [1.17.0](https://github.com/NikDoe/livo/compare/v1.16.0...v1.17.0) (2024-09-14)
 
 
