@@ -1,6 +1,7 @@
 import { Separator } from '@/components/ui/separator';
 import { Button } from '../ui/button';
 import Link from 'next/link';
+import { fetchProfile } from '@/utils/actions';
 
 type PageContainerProps = {
 	isProfileForm?: boolean;
@@ -9,12 +10,13 @@ type PageContainerProps = {
 	children: React.ReactNode;
 }
 
-function PageContainer(props: PageContainerProps) {
+async function PageContainer(props: PageContainerProps) {
 	const { children, isProfileForm = false, pageDescription, pageTitle } = props;
+	const profile = await fetchProfile();
 
 	const profileButton = (
 		<Button asChild variant='outline'>
-			<Link href='/profile/1'>Просмотреть профиль</Link>
+			<Link href={`/profile/${profile!.clerkId}`}>Просмотреть профиль</Link>
 		</Button>
 	);
 
