@@ -1,3 +1,10 @@
+# [1.18.0](https://github.com/NikDoe/livo/compare/v1.17.1...v1.18.0) (2024-09-15)
+
+
+### Features
+
+* add auth helper for route protection and profile redirection ([#91](https://github.com/NikDoe/livo/issues/91)) ([34ba517](https://github.com/NikDoe/livo/commit/34ba51774fadc1f45310760756a8fbe37afab754))
+
 ## [1.17.1](https://github.com/NikDoe/livo/compare/v1.17.0...v1.17.1) (2024-09-15)
 
 
