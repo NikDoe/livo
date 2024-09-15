@@ -12,7 +12,7 @@ function SignOutLink() {
 	};
 
 	return (
-		<SignOutButton redirectUrl='/'>
+		<SignOutButton redirectUrl='/cars'>
 			<Button
 				variant='outline'
 				className='w-full'
