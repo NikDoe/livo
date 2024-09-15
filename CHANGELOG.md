@@ -1,3 +1,10 @@
+# [1.19.0](https://github.com/NikDoe/livo/compare/v1.18.1...v1.19.0) (2024-09-15)
+
+
+### Features
+
+* add profile visibility and not found page for missing profiles ([#96](https://github.com/NikDoe/livo/issues/96)) ([58907a1](https://github.com/NikDoe/livo/commit/58907a147b7cc22254e08b1627ffbb1b3b50ca89))
+
 ## [1.18.1](https://github.com/NikDoe/livo/compare/v1.18.0...v1.18.1) (2024-09-15)
 
 
