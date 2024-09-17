@@ -1,3 +1,10 @@
+# [1.21.0](https://github.com/NikDoe/livo/compare/v1.20.0...v1.21.0) (2024-09-17)
+
+
+### Features
+
+* add custom image upload input for user profile ([2ef4dc8](https://github.com/NikDoe/livo/commit/2ef4dc863dc5fb8999a235df9c39855e7e0c1c44))
+
 # [1.20.0](https://github.com/NikDoe/livo/compare/v1.19.0...v1.20.0) (2024-09-15)
 
 
