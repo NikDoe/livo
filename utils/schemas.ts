@@ -32,3 +32,22 @@ export function validateWithZodSchema<T>(
 
 	return result.data;
 }
+
+function validateFile() {
+	const maxUploadSize = 1024 * 1024;
+	const acceptedFileTypes = ['image/'];
+	return z
+		.instanceof(File)
+		.refine((file) => {
+			return !file || file.size <= maxUploadSize;
+		}, 'Изображение должно быть не более 1 mb')
+		.refine((file) => {
+			return (
+				!file || acceptedFileTypes.some((type) => file.type.startsWith(type))
+			);
+		}, 'Файл должен быть изображением');
+}
+
+export const imageSchema = z.object({
+	image: validateFile(),
+});
