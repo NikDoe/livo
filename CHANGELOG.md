@@ -1,3 +1,10 @@
+# [1.23.0](https://github.com/NikDoe/livo/compare/v1.22.0...v1.23.0) (2024-09-19)
+
+
+### Features
+
+* add image validation and supabase upload ([4b8598b](https://github.com/NikDoe/livo/commit/4b8598b057c2f85c871621842ac5eb27c432f544))
+
 # [1.22.0](https://github.com/NikDoe/livo/compare/v1.21.0...v1.22.0) (2024-09-19)
 
 
