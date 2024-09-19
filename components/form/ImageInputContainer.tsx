@@ -23,6 +23,13 @@ const userIcon = (
 	<LuUser2 className='w-24 h-24 bg-primary rounded-md text-white mb-4' />
 );
 
+const imageInputWithButton = (
+	<div className='flex items-center space-x-2'>
+		<ImageInput />
+		<SubmitButton size='sm' text='загрузить' />
+	</div>
+);
+
 function ImageInputContainer(props: ImageInputContainerProps) {
 	const { image, name, action, text, children } = props;
 	const [isUpdateFormVisible, setUpdateFormVisible] = useState(false);
@@ -54,8 +61,7 @@ function ImageInputContainer(props: ImageInputContainerProps) {
 				<div className='max-w-lg'>
 					<FormContainer action={action}>
 						{children}
-						<ImageInput />
-						<SubmitButton size='sm' text='загрузить' />
+						{imageInputWithButton}
 					</FormContainer>
 				</div>
 			)}
