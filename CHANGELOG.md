@@ -1,3 +1,10 @@
+# [1.22.0](https://github.com/NikDoe/livo/compare/v1.21.0...v1.22.0) (2024-09-19)
+
+
+### Features
+
+* add form for profile image update ([e9fdc2d](https://github.com/NikDoe/livo/commit/e9fdc2d977392d50b379c0bfa290f3d72f58de1c))
+
 # [1.21.0](https://github.com/NikDoe/livo/compare/v1.20.0...v1.21.0) (2024-09-17)
 
 
