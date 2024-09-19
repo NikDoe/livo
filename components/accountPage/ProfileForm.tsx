@@ -1,5 +1,15 @@
-import { fetchProfile, updateProfileAction } from '@/utils/actions';
-import { FormContainer, FormInput, SubmitButton } from '../form';
+import {
+	fetchProfile,
+	updateProfileAction,
+	updateProfileImageAction
+} from '@/utils/actions';
+
+import {
+	FormContainer,
+	FormInput,
+	ImageInputContainer,
+	SubmitButton
+} from '../form';
 
 async function ProfileForm() {
 	const profile = await fetchProfile();
@@ -7,6 +17,12 @@ async function ProfileForm() {
 	return (
 		<section>
 			<div className='max-w-full lg:max-w-3xl'>
+				<ImageInputContainer
+					image={profile!.profileImage}
+					name={profile!.displayName}
+					action={updateProfileImageAction}
+					text='Обновить изображение'
+				/>
 				<FormContainer action={updateProfileAction}>
 					<div className='grid gap-10'>
 						<FormInput

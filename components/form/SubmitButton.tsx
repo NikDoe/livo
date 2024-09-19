@@ -3,13 +3,23 @@ import { RxReload } from 'react-icons/rx';
 import { useFormStatus } from 'react-dom';
 import { Button } from '@/components/ui/button';
 
+type btnSize = 'default' | 'lg' | 'sm';
+
 type SubmitButtonProps = {
 	className?: string;
 	text?: string;
+	size?: btnSize;
 };
 
+const loadingText = (
+	<>
+		<RxReload className='mr-2 h-4 w-4 animate-spin' />
+		Пожалуйста подождите...
+	</>
+);
+
 export function SubmitButton(props: SubmitButtonProps) {
-	const { className = '', text = 'отправить' } = props;
+	const { className = '', text = 'отправить', size = 'lg' } = props;
 	const { pending } = useFormStatus();
 
 	return (
@@ -17,16 +27,9 @@ export function SubmitButton(props: SubmitButtonProps) {
 			type='submit'
 			disabled={pending}
 			className={`capitalize ${className}`}
-			size='lg'
+			size={size}
 		>
-			{pending ? (
-				<>
-					<RxReload className='mr-2 h-4 w-4 animate-spin' />
-					Пожалуйста подождите...
-				</>
-			) : (
-				text
-			)}
+			{pending ? loadingText : text}
 		</Button>
 	);
 }
