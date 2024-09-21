@@ -61,4 +61,10 @@ export const propertySchema = z.object({
 		.max(100, {
 			message: 'Название должно содержать не более 100 символов.',
 		}),
+	price: z.coerce
+		.number()
+		.int()
+		.min(0, {
+			message: 'Цена должна быть положительным числом',
+		}),
 });

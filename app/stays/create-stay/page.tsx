@@ -1,4 +1,5 @@
 import { FormContainer, FormInput, SubmitButton } from '@/components/form';
+import PriceInput from '@/components/form/PriceInput';
 import { Button } from '@/components/ui/button';
 import { createPropertyAction } from '@/utils/actions';
 import Link from 'next/link';
@@ -22,9 +23,9 @@ function CreateProperty() {
 								name='name'
 								type='text'
 								label='Название (макс. 20 символов)'
-								defaultValue='Домик в Латвии'
+								defaultValue='Домик в Гомеле'
 							/>
-							{/* цена */}
+							<PriceInput />
 							{/* категории */}
 						</div>
 						{/* текстовая область / описание */}
