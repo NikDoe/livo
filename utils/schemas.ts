@@ -51,3 +51,14 @@ function validateFile() {
 export const imageSchema = z.object({
 	image: validateFile(),
 });
+
+export const propertySchema = z.object({
+	name: z
+		.string()
+		.min(2, {
+			message: 'Название должно содержать как минимум 2 символа.',
+		})
+		.max(100, {
+			message: 'Название должно содержать не более 100 символов.',
+		}),
+});
