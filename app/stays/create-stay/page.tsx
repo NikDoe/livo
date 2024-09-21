@@ -1,4 +1,5 @@
 import { FormContainer, FormInput, SubmitButton } from '@/components/form';
+import CategoriesInput from '@/components/form/CategoriesInput';
 import PriceInput from '@/components/form/PriceInput';
 import { Button } from '@/components/ui/button';
 import { createPropertyAction } from '@/utils/actions';
@@ -9,7 +10,7 @@ function CreateProperty() {
 		<section className='flex flex-col lg:flex-row gap-20'>
 			<div className='w-2/3'>
 				<div className='flex justify-between'>
-					<h1 className='text-3xl font-semibold mb-8'>
+					<h1 className='text-3xl font-semibold mb-20'>
 						Объявление о жилье
 					</h1>
 					<Button asChild>
@@ -26,7 +27,7 @@ function CreateProperty() {
 								defaultValue='Домик в Гомеле'
 							/>
 							<PriceInput />
-							{/* категории */}
+							<CategoriesInput />
 						</div>
 						{/* текстовая область / описание */}
 						<SubmitButton text='Разместить предложение' className='mt-20' />
