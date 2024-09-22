@@ -1,3 +1,12 @@
+# [1.25.0](https://github.com/NikDoe/livo/compare/v1.24.0...v1.25.0) (2024-09-22)
+
+
+### Features
+
+* add accommodation inputs ([4d07015](https://github.com/NikDoe/livo/commit/4d070150a9b0a3191751488c9ef880289ff07c37))
+* add country selection component ([d1bf0b4](https://github.com/NikDoe/livo/commit/d1bf0b4ae94497cc3ef9c8a780f9083719d6d694))
+* add Image input and Poppins font ([2293611](https://github.com/NikDoe/livo/commit/2293611c2078dba78634c2cc2913c2afdfe11a3b))
+
 # [1.24.0](https://github.com/NikDoe/livo/compare/v1.23.0...v1.24.0) (2024-09-22)
 
 
