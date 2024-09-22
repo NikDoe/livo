@@ -19,7 +19,7 @@ function ImageInput({ labelText }: ImageInputProps) {
 				type='file'
 				required
 				accept='image/*'
-				className='max-w-xs my-2'
+				className='mt-0'
 			/>
 		</div>
 	);

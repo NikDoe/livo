@@ -6,3 +6,5 @@ export { default as ImageInputContainer } from './ImageInputContainer';
 export { default as PriceInput } from './PriceInput';
 export { default as CategoriesInput } from './CategoriesInput';
 export { default as TextAreaInput } from './TextAreaInput';
+export { default as CountriesInput } from './CountriesInput';
+export { default as CounterInput } from './CounterInput';

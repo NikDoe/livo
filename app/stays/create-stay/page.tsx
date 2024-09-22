@@ -1,57 +1,25 @@
+import { AccommodationBlock, DetailsBlock, FormHeader } from '@/components/create-stay-form';
 import {
-	CategoriesInput,
 	FormContainer,
-	FormInput,
 	ImageInput,
-	PriceInput,
 	SubmitButton,
 	TextAreaInput
 } from '@/components/form';
-import CounterInput from '@/components/form/CounterInput';
-import CountriesInput from '@/components/form/CountriesInput';
-import { Button } from '@/components/ui/button';
-import { accommodationList } from '@/utils/accommodation';
 
-import { createPropertyAction } from '@/utils/actions';
-
-import Link from 'next/link';
+import { createPropertyAction } from '@/utils/actions';;
 
 function CreateProperty() {
 	return (
 		<section className='flex flex-col lg:flex-row gap-20'>
 			<div className='w-full space-y-10 lg:w-2/3'>
-				<div className='flex flex-col md:flex-row justify-between'>
-					<h1 className='mb-4 text-3xl font-semibold lg:mb-20'>
-						Объявление о жилье
-					</h1>
-					<Button asChild>
-						<Link href='/experiences/create-experience'>Организовать мероприятие</Link>
-					</Button>
-				</div>
+				<FormHeader />
 				<div className='space-y-20'>
 					<FormContainer action={createPropertyAction}>
-						<div className='grid md:grid-cols-2 gap-10 mb-10'>
-							<FormInput
-								name='name'
-								type='text'
-								label='Название (макс. 20 символов)'
-								defaultValue='Глэмпинг в Гомеле: Уютный домик в стиле Тосканы'
-							/>
-							<PriceInput />
-							<CategoriesInput />
-							<CountriesInput placeholder='Выберите страну' />
-							<ImageInput labelText='изображение' />
-						</div>
+						<h3 className='text-base font-bold mb-10'>Загрузите фото</h3>
+						<ImageInput />
+						<DetailsBlock />
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
-						<div className='grid md:grid-cols-2 gap-10 mt-10'>
-							{accommodationList.map(({ name, labelText }) => (
-								<CounterInput
-									key={name}
-									name={name}
-									labelText={labelText}
-								/>
-							))}
-						</div>
+						<AccommodationBlock />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
 					</FormContainer>
 				</div>
