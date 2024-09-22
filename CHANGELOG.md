@@ -1,3 +1,10 @@
+# [1.24.0](https://github.com/NikDoe/livo/compare/v1.23.0...v1.24.0) (2024-09-22)
+
+
+### Features
+
+* add basic create new stays form & validation ([e78df4f](https://github.com/NikDoe/livo/commit/e78df4f6675e40d37a36861f02bed6c8dac970e5))
+
 # [1.23.0](https://github.com/NikDoe/livo/compare/v1.22.0...v1.23.0) (2024-09-19)
 
 
