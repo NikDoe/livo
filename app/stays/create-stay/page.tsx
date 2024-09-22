@@ -2,6 +2,7 @@ import {
 	CategoriesInput,
 	FormContainer,
 	FormInput,
+	ImageInput,
 	PriceInput,
 	SubmitButton,
 	TextAreaInput
@@ -37,6 +38,7 @@ function CreateProperty() {
 							<PriceInput />
 							<CategoriesInput />
 							<CountriesInput placeholder='Выберите страну' />
+							<ImageInput labelText='изображение' />
 						</div>
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
@@ -45,7 +47,7 @@ function CreateProperty() {
 			</div>
 
 			<div className='w-1/3'>
-				<h1 className='text-3xl'>Превью</h1>
+				<h1 className='text-2xl font-semibold'>Предпросмотр</h1>
 			</div>
 		</section>
 	);

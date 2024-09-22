@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
 import Navbar from '@/components/navbar/Navbar';
@@ -9,7 +9,7 @@ import { Separator } from '@/components/ui/separator';
 import { ClerkProvider } from '@clerk/nextjs';
 import Providers from './providers';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppins = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 export const metadata: Metadata = {
 	title: 'Livo',
@@ -24,7 +24,7 @@ export default function RootLayout({
 	return (
 		<ClerkProvider>
 			<html lang='en' suppressHydrationWarning>
-				<body className={`${inter.className} min-h-screen flex flex-col`}>
+				<body className={`${poppins.className} min-h-screen flex flex-col`}>
 					<Providers>
 						<Navbar />
 						<main className='container py-16 lg:py-20 flex-1'>
