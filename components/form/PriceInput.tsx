@@ -11,7 +11,7 @@ type FormInputNumberProps = {
 function PriceInput({ defaultValue }: FormInputNumberProps) {
 	return (
 		<div>
-			<Label htmlFor='price'>
+			<Label htmlFor='price' className='uppercase'>
 				Цена (BYN)
 			</Label>
 			<Input

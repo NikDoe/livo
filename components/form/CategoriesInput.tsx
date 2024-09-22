@@ -22,7 +22,7 @@ function CategoriesInput({ defaultValue }: { defaultValue?: string }) {
 				name={name}
 				required
 			>
-				<SelectTrigger id={name}>
+				<SelectTrigger id={name} className='mt-2'>
 					<SelectValue />
 				</SelectTrigger>
 				<SelectContent>

@@ -1,8 +1,15 @@
-import { FormContainer, FormInput, SubmitButton } from '@/components/form';
-import CategoriesInput from '@/components/form/CategoriesInput';
-import PriceInput from '@/components/form/PriceInput';
+import {
+	CategoriesInput,
+	FormContainer,
+	FormInput,
+	PriceInput,
+	SubmitButton,
+	TextAreaInput
+} from '@/components/form';
 import { Button } from '@/components/ui/button';
+
 import { createPropertyAction } from '@/utils/actions';
+
 import Link from 'next/link';
 
 function CreateProperty() {
@@ -19,17 +26,17 @@ function CreateProperty() {
 				</div>
 				<div className='space-y-20'>
 					<FormContainer action={createPropertyAction}>
-						<div className='grid md:grid-cols-2 gap-8 mb-4'>
+						<div className='grid md:grid-cols-2 gap-10 mb-10'>
 							<FormInput
 								name='name'
 								type='text'
 								label='Название (макс. 20 символов)'
-								defaultValue='Домик в Гомеле'
+								defaultValue='Глэмпинг в Гомеле: Уютный домик в стиле Тосканы'
 							/>
 							<PriceInput />
 							<CategoriesInput />
 						</div>
-						{/* текстовая область / описание */}
+						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
 					</FormContainer>
 				</div>
