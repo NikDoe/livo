@@ -7,8 +7,10 @@ import {
 	SubmitButton,
 	TextAreaInput
 } from '@/components/form';
+import CounterInput from '@/components/form/CounterInput';
 import CountriesInput from '@/components/form/CountriesInput';
 import { Button } from '@/components/ui/button';
+import { accommodationList } from '@/utils/accommodation';
 
 import { createPropertyAction } from '@/utils/actions';
 
@@ -41,6 +43,15 @@ function CreateProperty() {
 							<ImageInput labelText='изображение' />
 						</div>
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
+						<div className='grid md:grid-cols-2 gap-10 mt-10'>
+							{accommodationList.map(({ name, labelText }) => (
+								<CounterInput
+									key={name}
+									name={name}
+									labelText={labelText}
+								/>
+							))}
+						</div>
 						<SubmitButton text='Разместить предложение' className='mt-20' />
 					</FormContainer>
 				</div>
