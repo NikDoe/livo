@@ -1,17 +1,27 @@
 import { Input } from '../ui/input';
+import { Label } from '../ui/label';
+
+type ImageInputProps = {
+	labelText?: string;
+}
 
 const name = 'image';
 
-function ImageInput() {
+function ImageInput({ labelText }: ImageInputProps) {
 	return (
-		<Input
-			id={name}
-			name={name}
-			type='file'
-			required
-			accept='image/*'
-			className='max-w-xs my-2'
-		/>
+		<div>
+			<Label htmlFor={name}>
+				{labelText}
+			</Label>
+			<Input
+				id={name}
+				name={name}
+				type='file'
+				required
+				accept='image/*'
+				className='mt-0'
+			/>
+		</div>
 	);
 }
 

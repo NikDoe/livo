@@ -78,5 +78,30 @@ export const propertySchema = z.object({
 			},
 			{ message: 'описание должно быть от 10 до 1000 слов', }
 		),
-
+	country: z
+		.string(),
+	guests: z.coerce
+		.number()
+		.int()
+		.min(0, {
+			message: 'Количество гостей должно быть положительным числом.',
+		}),
+	bedrooms: z.coerce
+		.number()
+		.int()
+		.min(0, {
+			message: 'Количество спален должно быть положительным числом.',
+		}),
+	beds: z.coerce
+		.number()
+		.int()
+		.min(0, {
+			message: 'Количество кроватей должно быть положительным числом.',
+		}),
+	baths: z.coerce
+		.number()
+		.int()
+		.min(0, {
+			message: 'Количество ванных комнат должно быть положительным числом.',
+		}),
 });

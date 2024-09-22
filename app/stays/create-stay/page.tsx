@@ -1,49 +1,32 @@
+import { AccommodationBlock, DetailsBlock, FormHeader } from '@/components/create-stay-form';
 import {
-	CategoriesInput,
 	FormContainer,
-	FormInput,
-	PriceInput,
+	ImageInput,
 	SubmitButton,
 	TextAreaInput
 } from '@/components/form';
-import { Button } from '@/components/ui/button';
 
-import { createPropertyAction } from '@/utils/actions';
-
-import Link from 'next/link';
+import { createPropertyAction } from '@/utils/actions';;
 
 function CreateProperty() {
 	return (
 		<section className='flex flex-col lg:flex-row gap-20'>
-			<div className='w-2/3'>
-				<div className='flex justify-between'>
-					<h1 className='text-3xl font-semibold mb-20'>
-						Объявление о жилье
-					</h1>
-					<Button asChild>
-						<Link href='/experiences/create-experience'>Организовать мероприятие</Link>
-					</Button>
-				</div>
+			<div className='w-full space-y-10 lg:w-2/3'>
+				<FormHeader />
 				<div className='space-y-20'>
 					<FormContainer action={createPropertyAction}>
-						<div className='grid md:grid-cols-2 gap-10 mb-10'>
-							<FormInput
-								name='name'
-								type='text'
-								label='Название (макс. 20 символов)'
-								defaultValue='Глэмпинг в Гомеле: Уютный домик в стиле Тосканы'
-							/>
-							<PriceInput />
-							<CategoriesInput />
-						</div>
+						<h3 className='text-base font-bold mb-10'>Загрузите фото</h3>
+						<ImageInput />
+						<DetailsBlock />
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
+						<AccommodationBlock />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
 					</FormContainer>
 				</div>
 			</div>
 
 			<div className='w-1/3'>
-				<h1 className='text-3xl'>Превью</h1>
+				<h1 className='text-2xl font-semibold'>Предпросмотр</h1>
 			</div>
 		</section>
 	);

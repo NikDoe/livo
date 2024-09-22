@@ -1,5 +1,7 @@
+'use client';
+
 import { Label } from '@/components/ui/label';
-import { categories } from '@/utils/staysCategories';
+import { formattedCountries, truncateCountryName } from '@/utils/countries';
 import {
 	Select,
 	SelectContent,
@@ -9,28 +11,29 @@ import {
 } from '@/components/ui/select';
 import { Prisma } from '@prisma/client';
 
-const name = Prisma.PropertyScalarFieldEnum.category;
+const name = Prisma.PropertyScalarFieldEnum.country;
 
-function CategoriesInput() {
+function CountriesInput({ placeholder }: { placeholder?: string }) {
 	return (
 		<div>
 			<Label htmlFor={name}>
-				Категория
+				Страна
 			</Label>
 			<Select
 				name={name}
 				required
 			>
 				<SelectTrigger id={name}>
-					<SelectValue placeholder='Выберите категорию' />
+					<SelectValue placeholder={placeholder} />
 				</SelectTrigger>
 				<SelectContent>
-					{categories.map((item) => {
+					{formattedCountries.map((item) => {
 						return (
-							<SelectItem key={item.label} value={item.label}>
-								<span className='flex items-center gap-4'>
-									<item.icon className='w-6 h-6' /> {item.label}
-								</span>
+							<SelectItem
+								key={item.code}
+								value={item.code}
+							>
+								{truncateCountryName(item.name, 34)}
 							</SelectItem>
 						);
 					})}
@@ -40,4 +43,4 @@ function CategoriesInput() {
 	);
 }
 
-export default CategoriesInput;
+export default CountriesInput;
