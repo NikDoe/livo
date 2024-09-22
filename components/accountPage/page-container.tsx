@@ -33,7 +33,7 @@ async function PageContainer(props: PageContainerProps) {
 				{isProfileForm ? profileButton : null}
 
 			</div>
-			<Separator />
+			<Separator className='h-[0.5px]' />
 			{children}
 		</div>
 	);

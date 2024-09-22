@@ -26,7 +26,7 @@ export function SubmitButton(props: SubmitButtonProps) {
 		<Button
 			type='submit'
 			disabled={pending}
-			className={`capitalize ${className}`}
+			className={`${className}`}
 			size={size}
 		>
 			{pending ? loadingText : text}
