@@ -14,7 +14,7 @@ function FormInput(props: FormInputProps) {
 
 	return (
 		<div>
-			<Label htmlFor={name} className='capitalize'>
+			<Label htmlFor={name}>
 				{label || name}
 			</Label>
 			<Input

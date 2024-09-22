@@ -78,5 +78,6 @@ export const propertySchema = z.object({
 			},
 			{ message: 'описание должно быть от 10 до 1000 слов', }
 		),
-
+	country: z
+		.string(),
 });

@@ -6,6 +6,7 @@ import {
 	SubmitButton,
 	TextAreaInput
 } from '@/components/form';
+import CountriesInput from '@/components/form/CountriesInput';
 import { Button } from '@/components/ui/button';
 
 import { createPropertyAction } from '@/utils/actions';
@@ -15,9 +16,9 @@ import Link from 'next/link';
 function CreateProperty() {
 	return (
 		<section className='flex flex-col lg:flex-row gap-20'>
-			<div className='w-2/3'>
-				<div className='flex justify-between'>
-					<h1 className='text-3xl font-semibold mb-20'>
+			<div className='w-full space-y-10 lg:w-2/3'>
+				<div className='flex flex-col md:flex-row justify-between'>
+					<h1 className='mb-4 text-3xl font-semibold lg:mb-20'>
 						Объявление о жилье
 					</h1>
 					<Button asChild>
@@ -35,6 +36,7 @@ function CreateProperty() {
 							/>
 							<PriceInput />
 							<CategoriesInput />
+							<CountriesInput placeholder='Выберите страну' />
 						</div>
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
