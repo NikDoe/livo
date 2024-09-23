@@ -1,3 +1,10 @@
+# [1.26.0](https://github.com/NikDoe/livo/compare/v1.25.0...v1.26.0) (2024-09-23)
+
+
+### Features
+
+* add amenities block ([26b3abc](https://github.com/NikDoe/livo/commit/26b3abccc9ae196c3e7d79547694289a165182d3))
+
 # [1.25.0](https://github.com/NikDoe/livo/compare/v1.24.0...v1.25.0) (2024-09-22)
 
 
