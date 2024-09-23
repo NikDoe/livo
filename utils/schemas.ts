@@ -104,4 +104,6 @@ export const propertySchema = z.object({
 		.min(0, {
 			message: 'Количество ванных комнат должно быть положительным числом.',
 		}),
+	amenities: z
+		.string(),
 });

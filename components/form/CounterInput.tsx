@@ -20,16 +20,19 @@ function CounterInput(props: CounterInputProps) {
 				{labelText}
 			</Label>
 			<Select
+				defaultValue='0'
 				name={name}
 				required
 			>
 				<SelectTrigger id={name}>
-					<SelectValue placeholder={placeholder || 0} />
+					<SelectValue
+						placeholder={placeholder || '0'}
+					/>
 				</SelectTrigger>
 				<SelectContent>
 					{Array.from({ length }, (_, i) => (
-						<SelectItem key={i + 1} value={(i).toString()}>
-							{i}
+						<SelectItem key={i} value={(i).toString()}>
+							{i.toString()}
 						</SelectItem>
 					))}
 				</SelectContent>

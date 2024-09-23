@@ -1,4 +1,5 @@
 import { AccommodationBlock, DetailsBlock, FormHeader } from '@/components/create-stay-form';
+import AmenitiesBlock from '@/components/create-stay-form/AmenitiesBlock';
 import {
 	FormContainer,
 	ImageInput,
@@ -20,6 +21,7 @@ function CreateProperty() {
 						<DetailsBlock />
 						<TextAreaInput name='description' labelText='Описание (от 10 до 1000 слов)' />
 						<AccommodationBlock />
+						<AmenitiesBlock />
 						<SubmitButton text='Разместить предложение' className='mt-20' />
 					</FormContainer>
 				</div>

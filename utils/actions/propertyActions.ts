@@ -12,6 +12,7 @@ export const createPropertyAction = async (
 		const rawData = Object.fromEntries(formData);
 		console.log(rawData);
 		const validatedFields = validateWithZodSchema(propertySchema, rawData);
+
 		console.log(validatedFields);
 
 		return { message: 'Жильё успешно опубликовано!' };
