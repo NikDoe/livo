@@ -1,3 +1,10 @@
+# [1.28.0](https://github.com/NikDoe/livo/compare/v1.27.0...v1.28.0) (2024-09-23)
+
+
+### Features
+
+* add hero section ([94a1418](https://github.com/NikDoe/livo/commit/94a14183b735ab2d354eaf8313c9cf9e4ef0d66b))
+
 # [1.27.0](https://github.com/NikDoe/livo/compare/v1.26.0...v1.27.0) (2024-09-23)
 
 
