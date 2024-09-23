@@ -1,4 +1,5 @@
 import countries from 'world-countries';
+import { COUNTRY_TRANSLATION_LANGUAGE } from './constants';
 
 export function truncateCountryName(str: string, maxLength: number = 20): string {
 	if (str.length > maxLength) {
@@ -10,7 +11,7 @@ export function truncateCountryName(str: string, maxLength: number = 20): string
 
 export const formattedCountries = countries.map((item) => ({
 	code: item.cca2,
-	name: item.translations['rus'].common,
+	name: item.translations[COUNTRY_TRANSLATION_LANGUAGE].common,
 	flag: item.flag,
 	location: item.latlng,
 	region: item.region,

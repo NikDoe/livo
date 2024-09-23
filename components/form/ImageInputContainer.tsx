@@ -9,7 +9,6 @@ import { LuUser2 } from 'react-icons/lu';
 import { SubmitButton } from './SubmitButton';
 
 import { type actionFunction } from '@/utils/types';
-import { Separator } from '../ui/separator';
 
 type ImageInputContainerProps = {
 	image: string;

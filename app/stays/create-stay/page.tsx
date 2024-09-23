@@ -1,5 +1,10 @@
-import { AccommodationBlock, DetailsBlock, FormHeader } from '@/components/create-stay-form';
-import AmenitiesBlock from '@/components/create-stay-form/AmenitiesBlock';
+import {
+	AccommodationBlock,
+	AmenitiesBlock,
+	DetailsBlock,
+	FormHeader
+} from '@/components/create-stay-form';
+
 import {
 	FormContainer,
 	ImageInput,

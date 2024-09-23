@@ -1,5 +1,6 @@
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { TEXTAREA_DEFAULT_ROWS_NUMBER } from '@/utils/constants';
 
 type TextAreaInputProps = {
 	name: string;
@@ -23,7 +24,7 @@ function TextAreaInput(props: TextAreaInputProps) {
 				id={name}
 				name={name}
 				defaultValue={defaultValue || tempDefaultDescription}
-				rows={rows || 5}
+				rows={rows || TEXTAREA_DEFAULT_ROWS_NUMBER}
 				required
 				className='leading-loose mt-2'
 			/>

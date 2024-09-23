@@ -3,6 +3,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from '../ui/dr
 import UserIcon from './UserIcon';
 import AuthDropdown from './AuthDropdown';
 import GuestDropdown from './GuestDropdown';
+import { DROPDOWN_MENU_SIDE_OFFSET } from '@/utils/constants';
 
 function UserMenuDropdown() {
 	return (
@@ -15,7 +16,7 @@ function UserMenuDropdown() {
 			<DropdownMenuContent
 				className='flex flex-col space-y-4 p-6'
 				align='end'
-				sideOffset={10}
+				sideOffset={DROPDOWN_MENU_SIDE_OFFSET}
 			>
 				<GuestDropdown />
 				<AuthDropdown />

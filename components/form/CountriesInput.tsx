@@ -10,6 +10,7 @@ import {
 	SelectValue,
 } from '@/components/ui/select';
 import { Prisma } from '@prisma/client';
+import { COUNTRY_NAME_MAX_LENGTH } from '@/utils/constants';
 
 const name = Prisma.PropertyScalarFieldEnum.country;
 
@@ -33,7 +34,7 @@ function CountriesInput({ placeholder }: { placeholder?: string }) {
 								key={item.code}
 								value={item.code}
 							>
-								{truncateCountryName(item.name, 34)}
+								{truncateCountryName(item.name, COUNTRY_NAME_MAX_LENGTH)}
 							</SelectItem>
 						);
 					})}

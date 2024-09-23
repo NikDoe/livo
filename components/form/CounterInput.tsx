@@ -1,7 +1,6 @@
+import { DEFAULT_ARRAY_LENGTH } from '@/utils/constants';
 import { Label } from '../ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '../ui/select';
-
-const DEFAULT_ARRAY_LENGTH = 4;
 
 type CounterInputProps = {
 	name: string;

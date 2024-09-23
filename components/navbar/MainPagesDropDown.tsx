@@ -9,6 +9,7 @@ import {
 import Link from 'next/link';
 
 import { SlArrowDown } from 'react-icons/sl';
+import { DROPDOWN_MENU_SIDE_OFFSET } from '@/utils/constants';
 
 function MainPagesDropDown() {
 	return (
@@ -22,7 +23,7 @@ function MainPagesDropDown() {
 			<DropdownMenuContent
 				className='flex flex-col space-y-4 p-6 w-56'
 				align='start'
-				sideOffset={10}
+				sideOffset={DROPDOWN_MENU_SIDE_OFFSET}
 			>
 				{mainPageslinks.map((link) => {
 					return (
