@@ -6,4 +6,7 @@ export {
 	updateProfileImageAction
 } from './profileActions';
 
-export { createPropertyAction } from './propertyActions';
+export {
+	createPropertyAction,
+	fetchProperties,
+} from './propertyActions';
