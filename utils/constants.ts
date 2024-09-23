@@ -1,3 +1,6 @@
+//ROUTES
+export const MAIN_ROUTES = new Set(['/cars', '/stays', '/flights', '/experiences'] as const);
+
 //NAVBAR
 export const DROPDOWN_MENU_SIDE_OFFSET = 10;
 

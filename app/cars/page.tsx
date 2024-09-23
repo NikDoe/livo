@@ -1,5 +1,6 @@
 'use client';
 
+import { Hero } from '@/components/hero';
 import { useToast } from '@/hooks/use-toast';
 import { toastNotifications } from '@/utils/notifications';
 import { useSearchParams } from 'next/navigation';
@@ -17,7 +18,12 @@ function CarsPage() {
 		});
 	}, [searchParams, toast]);
 
-	return <h1 className='text-3xl'>CarsPage</h1>;
+	return (
+		<div>
+			<Hero />
+			<h1 className='text-3xl'>CarsPage</h1>
+		</div>
+	);
 }
 
 export default CarsPage;

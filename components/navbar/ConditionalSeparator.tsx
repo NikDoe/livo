@@ -2,13 +2,13 @@
 
 import { usePathname } from 'next/navigation';
 import { Separator } from '../ui/separator';
-
-const mainRoutes = new Set(['/cars', '/stays', '/flights', '/experiences']);
+import { MAIN_ROUTES } from '@/utils/constants';
+import { MainRoutes } from '@/utils/types';
 
 function ConditionalSeparator() {
-	const pathname = usePathname();
+	const pathname = usePathname() as MainRoutes;
 
-	if (!mainRoutes.has(pathname)) {
+	if (!MAIN_ROUTES.has(pathname)) {
 		return <Separator />;
 	}
 

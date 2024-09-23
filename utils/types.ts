@@ -1,3 +1,5 @@
+import { MAIN_ROUTES } from './constants';
+
 type ActionResponse = {
     message: string;
 }
@@ -14,3 +16,5 @@ export type PropertyCardProps = {
     country: string;
     price: number;
 };
+
+export type MainRoutes = typeof MAIN_ROUTES extends Set<infer U> ? U : never;
