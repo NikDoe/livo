@@ -1,7 +1,10 @@
 'use server';
 
-import { propertySchema, validateWithZodSchema } from '../schemas';
+import { redirect } from 'next/navigation';
+import { imageSchema, propertySchema, validateWithZodSchema } from '../schemas';
+import { uploadImage } from '../supabase';
 import { getAuthUser, renderError } from './actionHelpers';
+import db from '../db';
 
 export const createPropertyAction = async (
 	prevState: any,
@@ -10,13 +13,23 @@ export const createPropertyAction = async (
 	const user = await getAuthUser();
 	try {
 		const rawData = Object.fromEntries(formData);
-		console.log(rawData);
+		const file = formData.get('image') as File;
+
 		const validatedFields = validateWithZodSchema(propertySchema, rawData);
+		const validatedFile = validateWithZodSchema(imageSchema, { image: file });
+		const fullPath = await uploadImage(validatedFile.image);
 
-		console.log(validatedFields);
+		await db.property.create({
+			data: {
+				...validatedFields,
+				image: fullPath,
+				profileId: user.id,
+			},
+		});
 
-		return { message: 'Жильё успешно опубликовано!' };
 	} catch (error) {
 		return renderError(error);
 	}
+
+	redirect('/cars?propertyCreated=true');
 };

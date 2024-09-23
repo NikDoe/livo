@@ -53,7 +53,7 @@ export const imageSchema = z.object({
 });
 
 export const propertySchema = z.object({
-	name: z
+	propertyTitle: z
 		.string()
 		.min(2, {
 			message: 'Название должно содержать как минимум 2 символа.',
