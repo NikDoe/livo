@@ -31,5 +31,31 @@ export const createPropertyAction = async (
 		return renderError(error);
 	}
 
-	redirect('/cars?propertyCreated=true');
+	redirect('/stays?propertyCreated=true');
+};
+
+type TFetchProperties = {
+	search?: string;
+	category?: string;
+}
+
+export const fetchProperties = async ({
+	search,
+	category,
+}: TFetchProperties) => {
+	const properties = await db.property.findMany({
+		where: {
+			category,
+			propertyTitle: search,
+		},
+		select: {
+			id: true,
+			propertyTitle: true,
+			country: true,
+			image: true,
+			price: true,
+		},
+	});
+
+	return properties;
 };
