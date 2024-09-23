@@ -1,3 +1,11 @@
+# [1.27.0](https://github.com/NikDoe/livo/compare/v1.26.0...v1.27.0) (2024-09-23)
+
+
+### Features
+
+* add create property action ([9e0e949](https://github.com/NikDoe/livo/commit/9e0e949e61a297f7aefbe409274d2cb8667461b0))
+* fetch properties ([4d1279f](https://github.com/NikDoe/livo/commit/4d1279fa1915ad4d2c8358244d594899be9b6491))
+
 # [1.26.0](https://github.com/NikDoe/livo/compare/v1.25.0...v1.26.0) (2024-09-23)
 
 
