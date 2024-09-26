@@ -1,3 +1,10 @@
+# [1.29.0](https://github.com/NikDoe/livo/compare/v1.28.0...v1.29.0) (2024-09-26)
+
+
+### Features
+
+* setup stays categories w/ query params ([9614dc6](https://github.com/NikDoe/livo/commit/9614dc662a555f8af7d60617f7b79cf9092ff26e))
+
 # [1.28.0](https://github.com/NikDoe/livo/compare/v1.27.0...v1.28.0) (2024-09-23)
 
 
