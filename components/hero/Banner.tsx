@@ -8,7 +8,7 @@ function Banner(props: BannerProps) {
 	const { imgUrl, text, title } = props;
 	return (
 		<section
-			className='p-20 rounded-2xl -mt-20 relative min-h-screen flex items-center justify-center lg:justify-start'
+			className='p-20 rounded-2xl -mt-20 mb-20 relative min-h-screen flex items-center justify-center lg:justify-start'
 			style={{
 				backgroundImage: `url(${imgUrl})`,
 				backgroundSize: 'cover',

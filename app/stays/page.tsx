@@ -1,19 +1,31 @@
 import { Hero } from '@/components/hero';
-import { fetchProperties } from '@/utils/actions';
+import { StaysCategoriesList, StaysList } from '@/components/mainPages/staysPage';
+import { Separator } from '@/components/ui/separator';
 
-const emptyProperties = (
-	<h1 className='text-3xl'>Нет доступных объектов для жилья</h1>
-);
+type StaysPageProps = {
+	searchParams: {
+		category?: string;
+		search?: string;
+	}
+}
 
-async function StaysPage() {
-	const properties = await fetchProperties({});
-
+async function StaysPage({ searchParams }: StaysPageProps) {
 	return (
-		<>
+		<section className='space-y-10'>
 			<Hero />
-			<h1 className='text-3xl'>StaysPage</h1>
-			{properties.length === 0 && emptyProperties}
-		</>
+			<div className='flex flex-col'>
+				<h1 className='text-5xl font-semibold mb-8'>Места для вашего отдыха</h1>
+				<Separator />
+			</div>
+			<StaysCategoriesList
+				category={searchParams?.category}
+				search={searchParams?.search}
+			/>
+			<StaysList
+				category={searchParams?.category}
+				search={searchParams?.search}
+			/>
+		</section>
 	);
 }
 
