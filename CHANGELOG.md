@@ -1,3 +1,10 @@
+# [1.30.0](https://github.com/NikDoe/livo/compare/v1.29.0...v1.30.0) (2024-09-27)
+
+
+### Features
+
+* create EmptyList component for no data scenarios ([c1996dc](https://github.com/NikDoe/livo/commit/c1996dc2ec064ed12ecec575d91fc79cb51d9a38))
+
 # [1.29.0](https://github.com/NikDoe/livo/compare/v1.28.0...v1.29.0) (2024-09-26)
 
 
