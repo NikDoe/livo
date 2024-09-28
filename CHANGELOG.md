@@ -1,3 +1,10 @@
+## [1.30.2](https://github.com/NikDoe/livo/compare/v1.30.1...v1.30.2) (2024-09-28)
+
+
+### Bug Fixes
+
+* stays functions, types & actions naming ([5c6a684](https://github.com/NikDoe/livo/commit/5c6a6843927ff2570e4b6e352f0f4a4b8c48f120))
+
 ## [1.30.1](https://github.com/NikDoe/livo/compare/v1.30.0...v1.30.1) (2024-09-28)
 
 
