@@ -1,3 +1,10 @@
+## [1.30.1](https://github.com/NikDoe/livo/compare/v1.30.0...v1.30.1) (2024-09-28)
+
+
+### Bug Fixes
+
+* resolve data fetching by category and search for listings ([32c8901](https://github.com/NikDoe/livo/commit/32c89010b435a6e1bfa9c711f910e764ac0b1111))
+
 # [1.30.0](https://github.com/NikDoe/livo/compare/v1.29.0...v1.30.0) (2024-09-27)
 
 
