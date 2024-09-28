@@ -1,5 +1,5 @@
 import { Hero } from '@/components/hero';
-import { StaysCategoriesList, StaysList } from '@/components/mainPages/staysPage';
+import { StaysCategoriesList, StaysContainer } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 
 type StaysPageProps = {
@@ -10,6 +10,7 @@ type StaysPageProps = {
 }
 
 async function StaysPage({ searchParams }: StaysPageProps) {
+
 	return (
 		<section className='space-y-10'>
 			<Hero />
@@ -21,7 +22,7 @@ async function StaysPage({ searchParams }: StaysPageProps) {
 				category={searchParams?.category}
 				search={searchParams?.search}
 			/>
-			<StaysList
+			<StaysContainer
 				category={searchParams?.category}
 				search={searchParams?.search}
 			/>
