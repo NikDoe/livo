@@ -54,6 +54,7 @@ export const fetchStays = async ({
 			country: true,
 			image: true,
 			price: true,
+			amenities: true,
 		},
 	});
 

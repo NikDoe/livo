@@ -48,7 +48,6 @@ function AmenitiesBlock({ defaultValue }: AmenitiesBlockProps) {
 								htmlFor={amenity.name}
 								className='text-sm font-medium leading-none capitalize flex gap-x-4 items-center'
 							>
-
 								{amenity.name}
 							</label>
 						</div>

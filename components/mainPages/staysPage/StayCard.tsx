@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatCurrency } from '@/utils/format';
 import { Separator } from '@/components/ui/separator';
+import { amenities, Amenity } from '@/utils/amenities';
+import StayCardAmenities from './StayCardAmenities';
 
 type Props = {
 	stay: StayCardProps;
@@ -10,9 +12,10 @@ type Props = {
 
 function StayCard({ stay }: Props) {
 	const { stayTitle, image, price } = stay;
-	const { id: stayId, country, } = stay;
+	const { id: stayId, country, amenities: cardAmenities } = stay;
+
 	return (
-		<article className='group relative border rounded-xl hover:border-muted-foreground transition-colors duration-500'>
+		<article className='group relative border rounded-xl'>
 			<Link href={`/stays/${stayId}`}>
 				<div className='relative h-[300px] overflow-hidden rounded-t-xl'>
 					<Image
@@ -24,11 +27,12 @@ function StayCard({ stay }: Props) {
 					/>
 				</div>
 				<div className='p-6'>
-					<h3 className='text-sm font-semibold mt-1'>
-						{stayTitle.substring(0, 30)}
-					</h3>
+					<h1 className='text-lg font-semibold mb-4'>
+						{stayTitle.substring(0, 25) + '...'}
+					</h1>
+					<StayCardAmenities cardAmenities={cardAmenities} />
 					<Separator className='h-[0.5px] my-4' />
-					<span className='font-thin text-muted-foreground'>{formatCurrency(price)}/ночь</span>
+					<span className='text-sm font-bold'>{formatCurrency(price)}/ночь</span>
 					{/* stay rating */}
 				</div>
 			</Link>
