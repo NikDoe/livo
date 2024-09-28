@@ -7,6 +7,6 @@ export {
 } from './profileActions';
 
 export {
-	createPropertyAction,
-	fetchProperties,
-} from './propertyActions';
+	createStayAction,
+	fetchStays,
+} from './stayActions';

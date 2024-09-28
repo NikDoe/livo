@@ -9,10 +9,10 @@ export type actionFunction = (
     formData: FormData
 ) => Promise<ActionResponse>;
 
-export type PropertyCardProps = {
+export type StayCardProps = {
     image: string;
     id: string;
-    propertyTitle: string;
+    stayTitle: string;
     country: string;
     price: number;
 };

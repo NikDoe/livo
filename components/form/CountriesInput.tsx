@@ -12,7 +12,7 @@ import {
 import { Prisma } from '@prisma/client';
 import { COUNTRY_NAME_MAX_LENGTH } from '@/utils/constants';
 
-const name = Prisma.PropertyScalarFieldEnum.country;
+const name = Prisma.StayScalarFieldEnum.country;
 
 function CountriesInput({ placeholder }: { placeholder?: string }) {
 	return (

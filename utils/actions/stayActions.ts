@@ -1,12 +1,12 @@
 'use server';
 
 import { redirect } from 'next/navigation';
-import { imageSchema, propertySchema, validateWithZodSchema } from '../schemas';
+import { imageSchema, staySchema, validateWithZodSchema } from '../schemas';
 import { uploadImage } from '../supabase';
 import { getAuthUser, renderError } from './actionHelpers';
 import db from '../db';
 
-export const createPropertyAction = async (
+export const createStayAction = async (
 	prevState: any,
 	formData: FormData
 ): Promise<{ message: string }> => {
@@ -15,11 +15,11 @@ export const createPropertyAction = async (
 		const rawData = Object.fromEntries(formData);
 		const file = formData.get('image') as File;
 
-		const validatedFields = validateWithZodSchema(propertySchema, rawData);
+		const validatedFields = validateWithZodSchema(staySchema, rawData);
 		const validatedFile = validateWithZodSchema(imageSchema, { image: file });
 		const fullPath = await uploadImage(validatedFile.image);
 
-		await db.property.create({
+		await db.stay.create({
 			data: {
 				...validatedFields,
 				image: fullPath,
@@ -31,31 +31,31 @@ export const createPropertyAction = async (
 		return renderError(error);
 	}
 
-	redirect('/stays?propertyCreated=true');
+	redirect('/stays?stayCreated=true');
 };
 
-type TFetchProperties = {
+type TFetchStays = {
 	search?: string;
 	category?: string;
 }
 
-export const fetchProperties = async ({
+export const fetchStays = async ({
 	search,
 	category,
-}: TFetchProperties) => {
-	const properties = await db.property.findMany({
+}: TFetchStays) => {
+	const stays = await db.stay.findMany({
 		where: {
 			category,
-			propertyTitle: search,
+			stayTitle: search,
 		},
 		select: {
 			id: true,
-			propertyTitle: true,
+			stayTitle: true,
 			country: true,
 			image: true,
 			price: true,
 		},
 	});
 
-	return properties;
+	return stays;
 };

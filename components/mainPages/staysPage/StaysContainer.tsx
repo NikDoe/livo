@@ -1,4 +1,4 @@
-import { fetchProperties } from '@/utils/actions';
+import { fetchStays } from '@/utils/actions';
 import EmptyList from '../common/EmptyList';
 import StaysList from './StaysList';
 
@@ -9,16 +9,16 @@ type StaysContainerProps = {
 
 async function StaysContainer(props: StaysContainerProps) {
 	const { category, search } = props;
-	const properties = await fetchProperties({ category, search });
+	const stays = await fetchStays({ category, search });
 
-	if (properties.length === 0) {
+	if (stays.length === 0) {
 		return (
 			<EmptyList />
 		);
 	}
 
 	return (
-		<StaysList />
+		<StaysList stays={stays} />
 	);
 }
 

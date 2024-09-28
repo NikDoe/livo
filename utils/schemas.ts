@@ -52,8 +52,8 @@ export const imageSchema = z.object({
 	image: validateFile(),
 });
 
-export const propertySchema = z.object({
-	propertyTitle: z
+export const staySchema = z.object({
+	stayTitle: z
 		.string()
 		.min(2, {
 			message: 'Название должно содержать как минимум 2 символа.',

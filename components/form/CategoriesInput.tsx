@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/select';
 import { Prisma } from '@prisma/client';
 
-const name = Prisma.PropertyScalarFieldEnum.category;
+const name = Prisma.StayScalarFieldEnum.category;
 
 function CategoriesInput() {
 	return (

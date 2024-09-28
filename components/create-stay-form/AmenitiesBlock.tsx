@@ -5,7 +5,7 @@ import { Checkbox } from '../ui/checkbox';
 import { amenities, type Amenity } from '@/utils/amenities';
 import { Prisma } from '@prisma/client';
 
-const inputName = Prisma.PropertyScalarFieldEnum.amenities;
+const inputName = Prisma.StayScalarFieldEnum.amenities;
 
 type AmenitiesBlockProps = {
 	defaultValue?: Amenity[]
@@ -50,7 +50,6 @@ function AmenitiesBlock({ defaultValue }: AmenitiesBlockProps) {
 							>
 
 								{amenity.name}
-								{/* <amenity.icon className='w-4 h-4' /> */}
 							</label>
 						</div>
 					))}

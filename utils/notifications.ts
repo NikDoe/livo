@@ -12,7 +12,7 @@ type Notification = {
 
 export const toastNotifications: Notification[] = [
 	{ key: 'accountCreated', title: 'Поздравляем!', description: 'Профиль успешно создан.' },
-	{ key: 'propertyCreated', title: 'Поздравляем!', description: 'Объявление успешно размещено.' },
+	{ key: 'stayCreated', title: 'Поздравляем!', description: 'Объявление успешно размещено.' },
 ];
 
 export function useCreateNotifications(notifications: Notification[]) {
