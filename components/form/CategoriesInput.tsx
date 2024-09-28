@@ -27,7 +27,7 @@ function CategoriesInput() {
 				<SelectContent>
 					{categories.map((item) => {
 						return (
-							<SelectItem key={item.label} value={item.label}>
+							<SelectItem key={item.name} value={item.name}>
 								<span className='flex items-center gap-4'>
 									<item.icon className='w-6 h-6' /> {item.label}
 								</span>
