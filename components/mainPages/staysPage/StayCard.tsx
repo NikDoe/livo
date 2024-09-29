@@ -3,10 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { formatCurrency } from '@/utils/format';
 import { Separator } from '@/components/ui/separator';
-import { amenities, Amenity } from '@/utils/amenities';
 import StayCardAmenities from './StayCardAmenities';
 import Rating from '../common/Rating';
-import FavoriteToggleButton from '../common/FavoriteToggleButton';
 
 type Props = {
 	stay: StayCardProps;
@@ -14,7 +12,7 @@ type Props = {
 
 function StayCard({ stay }: Props) {
 	const { stayTitle, image, price } = stay;
-	const { id: stayId, country, amenities: cardAmenities } = stay;
+	const { id: stayId, amenities: cardAmenities } = stay;
 
 	return (
 		<article className='group relative border rounded-xl'>
