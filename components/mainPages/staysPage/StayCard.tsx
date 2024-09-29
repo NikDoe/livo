@@ -6,6 +6,7 @@ import { Separator } from '@/components/ui/separator';
 import { amenities, Amenity } from '@/utils/amenities';
 import StayCardAmenities from './StayCardAmenities';
 import Rating from '../common/Rating';
+import FavoriteToggleButton from '../common/FavoriteToggleButton';
 
 type Props = {
 	stay: StayCardProps;
@@ -39,9 +40,6 @@ function StayCard({ stay }: Props) {
 					</div>
 				</div>
 			</Link>
-			<div className='absolute top-5 right-5 z-5'>
-				{/* favorite toggle button */}
-			</div>
 		</article>
 	);
 }
