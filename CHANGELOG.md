@@ -1,3 +1,10 @@
+# [1.33.0](https://github.com/NikDoe/livo/compare/v1.32.0...v1.33.0) (2024-09-29)
+
+
+### Features
+
+* add favorite button ([22c0a21](https://github.com/NikDoe/livo/commit/22c0a219db58629ad18931cc1c4ddb16b77bfeae))
+
 # [1.32.0](https://github.com/NikDoe/livo/compare/v1.31.0...v1.32.0) (2024-09-29)
 
 
