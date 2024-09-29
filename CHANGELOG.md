@@ -1,3 +1,10 @@
+# [1.31.0](https://github.com/NikDoe/livo/compare/v1.30.2...v1.31.0) (2024-09-29)
+
+
+### Features
+
+* add StayCardAmenities block ([d855d23](https://github.com/NikDoe/livo/commit/d855d234246c634d30d03f682c064111d3204a81))
+
 ## [1.30.2](https://github.com/NikDoe/livo/compare/v1.30.1...v1.30.2) (2024-09-28)
 
 
