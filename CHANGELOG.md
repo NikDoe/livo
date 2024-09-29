@@ -1,3 +1,10 @@
+# [1.35.0](https://github.com/NikDoe/livo/compare/v1.34.0...v1.35.0) (2024-09-29)
+
+
+### Features
+
+* Add skeleton loader for housing cards display ([3d0dfca](https://github.com/NikDoe/livo/commit/3d0dfca544935a2dfad5b46b8f8d32f6744a3941))
+
 # [1.34.0](https://github.com/NikDoe/livo/compare/v1.33.0...v1.34.0) (2024-09-29)
 
 
