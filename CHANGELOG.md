@@ -1,3 +1,10 @@
+# [1.32.0](https://github.com/NikDoe/livo/compare/v1.31.0...v1.32.0) (2024-09-29)
+
+
+### Features
+
+* add rating component w/ temp data ([d8ae7a2](https://github.com/NikDoe/livo/commit/d8ae7a2af3c80af7dc3b2ebb9114f93bed005a38))
+
 # [1.31.0](https://github.com/NikDoe/livo/compare/v1.30.2...v1.31.0) (2024-09-29)
 
 
