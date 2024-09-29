@@ -5,6 +5,7 @@ import { formatCurrency } from '@/utils/format';
 import { Separator } from '@/components/ui/separator';
 import { amenities, Amenity } from '@/utils/amenities';
 import StayCardAmenities from './StayCardAmenities';
+import Rating from '../common/Rating';
 
 type Props = {
 	stay: StayCardProps;
@@ -32,8 +33,10 @@ function StayCard({ stay }: Props) {
 					</h1>
 					<StayCardAmenities cardAmenities={cardAmenities} />
 					<Separator className='h-[0.5px] my-4' />
-					<span className='text-sm font-bold'>{formatCurrency(price)}/ночь</span>
-					{/* stay rating */}
+					<div className='flex justify-between'>
+						<span className='text-sm font-bold'>{formatCurrency(price)}/ночь</span>
+						<Rating inPage={false} id={stayId} />
+					</div>
 				</div>
 			</Link>
 			<div className='absolute top-5 right-5 z-5'>
