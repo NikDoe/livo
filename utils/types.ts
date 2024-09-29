@@ -15,6 +15,7 @@ export type StayCardProps = {
     stayTitle: string;
     country: string;
     price: number;
+    amenities: string;
 };
 
 export type MainRoutes = typeof MAIN_ROUTES extends Set<infer U> ? U : never;
