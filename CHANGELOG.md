@@ -1,3 +1,10 @@
+# [1.34.0](https://github.com/NikDoe/livo/compare/v1.33.0...v1.34.0) (2024-09-29)
+
+
+### Features
+
+* Add flag and country name display component ([31f3c00](https://github.com/NikDoe/livo/commit/31f3c00fe076a03fb26123413457209d61bdd540))
+
 # [1.33.0](https://github.com/NikDoe/livo/compare/v1.32.0...v1.33.0) (2024-09-29)
 
 
