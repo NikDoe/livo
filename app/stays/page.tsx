@@ -1,6 +1,8 @@
 import { Hero } from '@/components/hero';
 import { StaysCategoriesList, StaysContainer } from '@/components/mainPages/staysPage';
+import LoadingStays from '@/components/mainPages/staysPage/LoadingStays';
 import { Separator } from '@/components/ui/separator';
+import { Suspense } from 'react';
 
 type StaysPageProps = {
 	searchParams: {
@@ -22,10 +24,12 @@ async function StaysPage({ searchParams }: StaysPageProps) {
 				category={searchParams?.category}
 				search={searchParams?.search}
 			/>
-			<StaysContainer
-				category={searchParams?.category}
-				search={searchParams?.search}
-			/>
+			<Suspense fallback={<LoadingStays />}>
+				<StaysContainer
+					category={searchParams?.category}
+					search={searchParams?.search}
+				/>
+			</Suspense>
 		</section>
 	);
 }
