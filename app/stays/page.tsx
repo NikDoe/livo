@@ -1,4 +1,5 @@
 import { Hero } from '@/components/hero';
+import { SearchInput } from '@/components/mainPages';
 import { StaysCategoriesList, StaysContainer } from '@/components/mainPages/staysPage';
 import LoadingStays from '@/components/mainPages/staysPage/LoadingStays';
 import { Separator } from '@/components/ui/separator';
@@ -16,6 +17,7 @@ async function StaysPage({ searchParams }: StaysPageProps) {
 	return (
 		<section className='space-y-10'>
 			<Hero />
+			<SearchInput placeholder='Найти жильё...' />
 			<div className='flex flex-col'>
 				<h1 className='text-5xl font-semibold mb-8'>Места для вашего отдыха</h1>
 				<Separator />

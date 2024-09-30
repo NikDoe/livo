@@ -46,7 +46,10 @@ export const fetchStays = async ({
 	const stays = await db.stay.findMany({
 		where: {
 			category,
-			stayTitle: search,
+			stayTitle: {
+				contains: search,
+				mode: 'insensitive',
+			},
 		},
 		select: {
 			id: true,
