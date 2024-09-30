@@ -15,18 +15,19 @@ datasource db {
 }
 
 model Profile {
-  id           String   @id @default(uuid())
-  clerkId      String   @unique
+  id           String     @id @default(uuid())
+  clerkId      String     @unique
   displayName  String
   realName     String
   profileImage String
-  createdAt    DateTime @default(now())
-  updatedAt    DateTime @updatedAt
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
   stays        Stay[]
+  Favorite     Favorite[]
 }
 
 model Stay {
-  id          String   @id @default(uuid())
+  id          String     @id @default(uuid())
   stayTitle   String
   category    String
   image       String
@@ -38,8 +39,21 @@ model Stay {
   beds        Int
   baths       Int
   amenities   String
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  profile     Profile  @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+  profile     Profile    @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
   profileId   String
+  Favorite    Favorite[]
+}
+
+model Favorite {
+  id        String   @id @default(uuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  profile   Profile @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
+  profileId String
+
+  stay   Stay   @relation(fields: [stayId], references: [id], onDelete: Cascade)
+  stayId String
 }

@@ -9,7 +9,7 @@ type SingleStayPageProps = {
 function SingleStayPage({ params }: SingleStayPageProps) {
 	return (
 		<div>
-			<FavoriteToggleButton id={params.stayId} />
+			<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
 			<p> Жильё № {params.stayId}</p>
 		</div >
 	);
