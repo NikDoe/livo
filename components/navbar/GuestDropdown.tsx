@@ -9,7 +9,11 @@ function GuestDropdown() {
 	return (
 		<SignedOut>
 			<DropdownMenuItem>
-				<SignInButton mode='modal'>
+				<SignInButton
+					mode='modal'
+					forceRedirectUrl=''
+					fallbackRedirectUrl=''
+				>
 					<Button variant='ghost' className='flex'>
 						<SlLogin className='w-6 h-6 mr-4' />
 						Войти
@@ -18,7 +22,11 @@ function GuestDropdown() {
 			</DropdownMenuItem>
 			<Separator />
 			<DropdownMenuItem>
-				<SignUpButton mode='modal'>
+				<SignUpButton
+					mode='modal'
+					forceRedirectUrl=''
+					fallbackRedirectUrl=''
+				>
 					<Button variant='ghost' className='flex'>
 						<SlUserFollow className='w-6 h-6 mr-4' />
 						Регистрация
