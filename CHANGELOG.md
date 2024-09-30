@@ -1,3 +1,10 @@
+# [1.37.0](https://github.com/NikDoe/livo/compare/v1.36.0...v1.37.0) (2024-09-30)
+
+
+### Features
+
+* Redirect unauthorized users to login on favorite button click ([41360cc](https://github.com/NikDoe/livo/commit/41360cc82c0476f22ea3d1f382c0685ac51b4a4b))
+
 # [1.36.0](https://github.com/NikDoe/livo/compare/v1.35.0...v1.36.0) (2024-09-30)
 
 
