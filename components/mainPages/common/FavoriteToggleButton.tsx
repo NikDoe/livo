@@ -1,21 +1,26 @@
-import { FaHeart } from 'react-icons/fa';
-import { Button } from '@/components/ui/button';
 import { auth } from '@clerk/nextjs/server';
 import FavoriteSignInButton from './FavoriteSignInButton';
+import FavoriteToggleForm from './FavoriteToggleForm';
+import { FavoriteType, fetchFavoriteId } from '@/utils/actions';
 
 type FavoriteToggleButtonProps = {
+	favoriteType: FavoriteType;
 	id: string;
 }
 
-function FavoriteToggleButton({ id }: FavoriteToggleButtonProps) {
+async function FavoriteToggleButton({ favoriteType, id }: FavoriteToggleButtonProps) {
 	const { userId } = auth();
 
 	if (!userId) return <FavoriteSignInButton />;
 
+	const favoriteId = await fetchFavoriteId({ favoriteType, id });
+
 	return (
-		<Button size='icon' variant='ghost' className='p-2 cursor-pointer rounded-full border-2'>
-			<FaHeart className='w-4 h-4' />
-		</Button>
+		<FavoriteToggleForm
+			favoriteId={favoriteId}
+			favoriteType={favoriteType}
+			id={id}
+		/>
 	);
 }
 
