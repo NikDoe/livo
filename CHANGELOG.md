@@ -1,3 +1,10 @@
+# [1.38.0](https://github.com/NikDoe/livo/compare/v1.37.0...v1.38.0) (2024-09-30)
+
+
+### Features
+
+* Add favorite functionality and make button reusable ([316ce51](https://github.com/NikDoe/livo/commit/316ce5148da950bfe88c3961d94cd5c46871cd17))
+
 # [1.37.0](https://github.com/NikDoe/livo/compare/v1.36.0...v1.37.0) (2024-09-30)
 
 
