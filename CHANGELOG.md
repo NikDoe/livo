@@ -1,3 +1,10 @@
+# [1.36.0](https://github.com/NikDoe/livo/compare/v1.35.0...v1.36.0) (2024-09-30)
+
+
+### Features
+
+* Add universal search bar for use across main pages ([59ed695](https://github.com/NikDoe/livo/commit/59ed695c10fe9a4d233a0a22a7cb8f48c41df3b0))
+
 # [1.35.0](https://github.com/NikDoe/livo/compare/v1.34.0...v1.35.0) (2024-09-29)
 
 
