@@ -1,3 +1,10 @@
+# [1.39.0](https://github.com/NikDoe/livo/compare/v1.38.0...v1.39.0) (2024-10-02)
+
+
+### Features
+
+* Add Favorites page with tab navigation for different types ([474794f](https://github.com/NikDoe/livo/commit/474794f73fbe273f3dc4faedbe7981b2623eba31))
+
 # [1.38.0](https://github.com/NikDoe/livo/compare/v1.37.0...v1.38.0) (2024-09-30)
 
 
