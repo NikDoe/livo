@@ -3,6 +3,7 @@
 import { revalidatePath } from 'next/cache';
 import db from '../db';
 import { getAuthUser, renderError } from './actionHelpers';
+import { Favorites } from '../types';
 
 export type FavoriteType = 'stay';
 
@@ -78,4 +79,35 @@ const getFavoriteMessage = (favoriteType: FavoriteType, isRemoved: boolean) => {
 
 	const itemType = favoriteTypeTranslations[favoriteType];
 	return isRemoved ? `${itemType} удалено из избранного` : `${itemType} добавлено в избранное`;
+};
+
+export const fetchFavorites = async () => {
+	const user = await getAuthUser();
+
+	const favorites = await db.favorite.findMany({
+		where: {
+			profileId: user.id,
+		},
+		select: {
+			stay: {
+				select: {
+					id: true,
+					stayTitle: true,
+					country: true,
+					image: true,
+					price: true,
+					amenities: true,
+				},
+			},
+			// car: { select: { ... } },
+			// experience: { select: { ... } },
+		},
+	});
+
+	return favorites.reduce<Favorites>((acc, favorite) => {
+		if (favorite.stay) acc.stays.push(favorite.stay);
+		// if (favorite.car) acc.cars.push(favorite.car);
+		// if (favorite.experience) acc.experiences.push(favorite.experience);
+		return acc;
+	}, { stays: [], });
 };

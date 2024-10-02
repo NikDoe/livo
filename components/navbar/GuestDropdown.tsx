@@ -1,18 +1,22 @@
+'use client';
+
 import { SignedOut, SignInButton, SignUpButton } from '@clerk/nextjs';
 import { DropdownMenuItem } from '../ui/dropdown-menu';
 import { Separator } from '../ui/separator';
 import { Button } from '../ui/button';
 
 import { SlLogin, SlUserFollow } from 'react-icons/sl';
+import { usePathname } from 'next/navigation';
 
 function GuestDropdown() {
+	const pathname = usePathname();
+
 	return (
 		<SignedOut>
 			<DropdownMenuItem>
 				<SignInButton
 					mode='modal'
-					forceRedirectUrl=''
-					fallbackRedirectUrl=''
+					forceRedirectUrl={pathname}
 				>
 					<Button variant='ghost' className='flex'>
 						<SlLogin className='w-6 h-6 mr-4' />
@@ -24,8 +28,7 @@ function GuestDropdown() {
 			<DropdownMenuItem>
 				<SignUpButton
 					mode='modal'
-					forceRedirectUrl=''
-					fallbackRedirectUrl=''
+					forceRedirectUrl={pathname}
 				>
 					<Button variant='ghost' className='flex'>
 						<SlUserFollow className='w-6 h-6 mr-4' />
