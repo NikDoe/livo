@@ -6,6 +6,18 @@
 	.container {
 		@apply px-4 mx-auto max-w-6xl xl:max-w-7xl;
 	}
+
+	.title-level_1 {
+		@apply font-semibold md:text-3xl;
+	}
+
+	/* .title-level_2 {
+		@apply text-[32px] font-semibold;
+	} */
+
+	.page_subtitle {
+		@apply text-lg text-muted-foreground;
+	}
 }
 
 @layer base {

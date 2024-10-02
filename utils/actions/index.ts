@@ -14,5 +14,6 @@ export {
 export {
 	type FavoriteType,
 	fetchFavoriteId,
-	toggleFavoriteAction
+	toggleFavoriteAction,
+	fetchFavorites,
 } from './favoriteActions';

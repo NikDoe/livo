@@ -25,10 +25,10 @@ function EmptyList({
 
 	return (
 		<div className='flex flex-col items-start justify-start'>
-			<h2 className='text-2xl font-bold'>
+			<h2 className='title-level_1'>
 				{heading || defaultHeading}
 			</h2>
-			<p className='text-lg text-muted-foreground mt-2'>
+			<p className='page_subtitle mt-2'>
 				{message || defaultMessage}
 			</p>
 			<Button asChild className='mt-8' size='lg'>
