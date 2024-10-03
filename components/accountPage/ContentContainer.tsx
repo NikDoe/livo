@@ -10,7 +10,7 @@ type PageContainerProps = {
 	children: React.ReactNode;
 }
 
-async function PageContainer(props: PageContainerProps) {
+async function ContentContainer(props: PageContainerProps) {
 	const { children, isProfileForm = false, pageDescription, pageTitle } = props;
 	const profile = await fetchProfile();
 
@@ -39,4 +39,4 @@ async function PageContainer(props: PageContainerProps) {
 	);
 }
 
-export default PageContainer;
+export default ContentContainer;

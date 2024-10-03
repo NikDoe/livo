@@ -1,4 +1,4 @@
-import PageContainer from '@/components/accountPage/page-container';
+import ContentContainer from '@/components/accountPage/ContentContainer';
 import SecurityForm from '@/components/accountPage/SecurityForm';
 import { Metadata } from 'next';
 
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 function SecurityPage() {
 	return (
-		<PageContainer
+		<ContentContainer
 			pageTitle='Безопасность'
 			pageDescription='Управляйте настройками безопасности вашего аккаунта, включая изменение пароля и настройку двухфакторной аутентификации. Обеспечьте защиту вашего аккаунта на сайте'
 		>
 			<SecurityForm />
-		</PageContainer>
+		</ContentContainer>
 	);
 }
 

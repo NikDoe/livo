@@ -25,3 +25,20 @@ export const accountSidebarNavLinks: Omit<NavLink, 'icon'>[] = [
 	{ href: '/account/payments', label: 'Способы оплаты' },
 	{ href: '/account/notifications', label: 'Оповещения' },
 ];
+
+export const pagesLinks: Omit<NavLink, 'icon'>[] = [
+	{ href: '/cars', label: 'Аренда машин' },
+	{ href: '/experiences', label: 'Чем заняться' },
+	{ href: '/flights', label: 'Авиабилеты' },
+	{ href: '/stays', label: 'Аренда жилья' },
+	{ href: '/wishlists', label: 'Избранное' },
+	{ href: '/bookings', label: 'Бронирования' },
+];
+
+export const getLabelByHref = (href: string) => {
+	const page = pagesLinks.find(link => href.includes(link.href));
+	return {
+		pageLabel: page ? page.label : undefined,
+		pageHref: page ? page.href : undefined,
+	};
+};

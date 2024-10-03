@@ -9,6 +9,7 @@ export {
 export {
 	createStayAction,
 	fetchStays,
+	fetchStayDetails,
 } from './stayActions';
 
 export {

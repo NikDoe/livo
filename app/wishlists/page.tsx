@@ -1,3 +1,4 @@
+import PageContainer from '@/components/common/PageContainer';
 import {
 	CarsList,
 	ExperiencesList,
@@ -30,24 +31,26 @@ async function WishListsPage() {
 	const pluralText = getPluralFavorites(favorites.stays.length);
 
 	return (
-		<Tabs defaultValue='stays'>
-			<div className='flex items-end justify-between xl:mb-16'>
-				<div>
-					<h1 className='title-level_1 mb-3'>Ваши избранные предложения</h1>
-					<p className='page_subtitle'>Вы добавили {pluralText}</p>
+		<PageContainer>
+			<Tabs defaultValue='stays'>
+				<div className='flex items-end justify-between xl:mb-16'>
+					<div>
+						<h1 className='title-level_1 mb-3'>Ваши избранные предложения</h1>
+						<p className='page_subtitle'>Вы добавили {pluralText}</p>
+					</div>
+					<TabsList>
+						<TabsTrigger value='stays'>Жильё</TabsTrigger>
+						<TabsTrigger value='flights'>Авиабилеты</TabsTrigger>
+						<TabsTrigger value='cars'>Автомобили</TabsTrigger>
+						<TabsTrigger value='experiences'>Туры</TabsTrigger>
+					</TabsList>
 				</div>
-				<TabsList>
-					<TabsTrigger value='stays'>Жильё</TabsTrigger>
-					<TabsTrigger value='flights'>Авиабилеты</TabsTrigger>
-					<TabsTrigger value='cars'>Автомобили</TabsTrigger>
-					<TabsTrigger value='experiences'>Туры</TabsTrigger>
-				</TabsList>
-			</div>
-			<TabsContent value='stays'><StaysList stays={stays} /></TabsContent>
-			<TabsContent value='flights'><FlightsList /></TabsContent>
-			<TabsContent value='cars'><CarsList /></TabsContent>
-			<TabsContent value='experiences'><ExperiencesList /></TabsContent>
-		</Tabs>
+				<TabsContent value='stays'><StaysList stays={stays} /></TabsContent>
+				<TabsContent value='flights'><FlightsList /></TabsContent>
+				<TabsContent value='cars'><CarsList /></TabsContent>
+				<TabsContent value='experiences'><ExperiencesList /></TabsContent>
+			</Tabs>
+		</PageContainer>
 	);
 }
 

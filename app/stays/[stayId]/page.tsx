@@ -1,4 +1,7 @@
+import PageContainer from '@/components/common/PageContainer';
 import { FavoriteToggleButton } from '@/components/mainPages';
+import { fetchStayDetails } from '@/utils/actions';
+import { redirect } from 'next/navigation';
 
 type SingleStayPageProps = {
 	params: {
@@ -6,12 +9,16 @@ type SingleStayPageProps = {
 	}
 }
 
-function SingleStayPage({ params }: SingleStayPageProps) {
+async function SingleStayPage({ params }: SingleStayPageProps) {
+	const stay = await fetchStayDetails(params.stayId);
+
+	if (!stay) redirect('/stays');
+
 	return (
-		<div>
+		<PageContainer name={stay.stayTitle}>
 			<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
 			<p> Жильё № {params.stayId}</p>
-		</div >
+		</PageContainer>
 	);
 }
 

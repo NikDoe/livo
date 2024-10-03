@@ -1,4 +1,4 @@
-import PageContainer from '@/components/accountPage/page-container';
+import ContentContainer from '@/components/accountPage/ContentContainer';
 import PaymentsForm from '@/components/accountPage/PaymentsForm';
 import { Metadata } from 'next';
 
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 function PaymentsPage() {
 	return (
-		<PageContainer
+		<ContentContainer
 			pageTitle='Способы оплаты'
 			pageDescription='Добавляйте, удаляйте или редактируйте способы оплаты. Так вы можете легко управлять своими финансовыми данными на сайте.'
 		>
 			<PaymentsForm />
-		</PageContainer>
+		</ContentContainer>
 	);
 }
 

@@ -63,3 +63,14 @@ export const fetchStays = async ({
 
 	return stays;
 };
+
+export const fetchStayDetails = (id: string) => {
+	return db.stay.findUnique({
+		where: {
+			id,
+		},
+		include: {
+			profile: true,
+		},
+	});
+};

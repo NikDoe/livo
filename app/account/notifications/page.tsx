@@ -1,5 +1,5 @@
+import ContentContainer from '@/components/accountPage/ContentContainer';
 import NotificationsForm from '@/components/accountPage/NotificationsForm';
-import PageContainer from '@/components/accountPage/page-container';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,12 +10,12 @@ export const metadata: Metadata = {
 
 function NotificationsPage() {
 	return (
-		<PageContainer
+		<ContentContainer
 			pageTitle='Настройки оповещения'
 			pageDescription='Настройте, какие уведомления вы хотите получать и как часто. Управляйте своими оповещениями на сайте для лучшего контроля'
 		>
 			<NotificationsForm />
-		</PageContainer>
+		</ContentContainer>
 	);
 }
 

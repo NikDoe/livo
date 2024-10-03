@@ -1,15 +1,15 @@
-import PageContainer from '@/components/accountPage/page-container';
+import ContentContainer from '@/components/accountPage/ContentContainer';
 import ProfileForm from '@/components/accountPage/ProfileForm';
 
 function AccountPage() {
 	return (
-		<PageContainer
+		<ContentContainer
 			isProfileForm
 			pageTitle='Личная информация'
 			pageDescription='Так вас будут видеть другие пользователи на сайте.'
 		>
 			<ProfileForm />
-		</PageContainer>
+		</ContentContainer>
 	);
 }
 
