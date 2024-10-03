@@ -1,3 +1,10 @@
+# [1.40.0](https://github.com/NikDoe/livo/compare/v1.39.0...v1.40.0) (2024-10-03)
+
+
+### Features
+
+* Added breadcrumbs for enhanced navigation ([3efb431](https://github.com/NikDoe/livo/commit/3efb43139790abc4c13f94e69092ac450235ea35))
+
 # [1.39.0](https://github.com/NikDoe/livo/compare/v1.38.0...v1.39.0) (2024-10-02)
 
 
