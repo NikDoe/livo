@@ -61,6 +61,14 @@ export const staySchema = z.object({
 		.max(100, {
 			message: 'Название должно содержать не более 100 символов.',
 		}),
+	stayTagline: z
+		.string()
+		.min(2, {
+			message: 'Краткое описание должно содержать как минимум 2 символа.',
+		})
+		.max(100, {
+			message: 'Краткое описание содержать не более 100 символов.',
+		}),
 	price: z.coerce
 		.number()
 		.int()

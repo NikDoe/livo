@@ -19,7 +19,6 @@ function BreadCrumbs({ name }: BreadcrumbProps) {
 	const pathName = usePathname();
 	const { pageLabel, pageHref } = getLabelByHref(pathName);
 
-
 	return (
 		<Breadcrumb>
 			<BreadcrumbList>
@@ -27,17 +26,13 @@ function BreadCrumbs({ name }: BreadcrumbProps) {
 					<BreadcrumbLink href='/'>Главная</BreadcrumbLink>
 				</BreadcrumbItem>
 				<BreadcrumbSeparator />
-				{
-					name ? (
-						<BreadcrumbItem>
-							<BreadcrumbLink href={pageHref}>{pageLabel}</BreadcrumbLink>
-						</BreadcrumbItem>
-					) : (
-						<BreadcrumbItem>
-							<BreadcrumbPage>{pageLabel}</BreadcrumbPage>
-						</BreadcrumbItem>
-					)
-				}
+				<BreadcrumbItem>
+					{
+						name
+							? <BreadcrumbLink href={pageHref}>{pageLabel}</BreadcrumbLink>
+							: <BreadcrumbPage>{pageLabel}</BreadcrumbPage>
+					}
+				</BreadcrumbItem>
 
 				{
 					name && (
