@@ -1,3 +1,10 @@
+# [1.42.0](https://github.com/NikDoe/livo/compare/v1.41.0...v1.42.0) (2024-10-09)
+
+
+### Features
+
+* add metadata to single stay page ([1f82382](https://github.com/NikDoe/livo/commit/1f8238204db6a8dffc39f1c7193323726a7546d8))
+
 # [1.41.0](https://github.com/NikDoe/livo/compare/v1.40.0...v1.41.0) (2024-10-09)
 
 
