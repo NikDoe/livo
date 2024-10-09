@@ -29,6 +29,7 @@ model Profile {
 model Stay {
   id          String     @id @default(uuid())
   stayTitle   String
+  stayTagline String
   category    String
   image       String
   country     String

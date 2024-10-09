@@ -1,4 +1,4 @@
-import PageContainer from '@/components/common/PageContainer';
+import { PageContainer, ShareButton } from '@/components/common';
 import { FavoriteToggleButton } from '@/components/mainPages';
 import { fetchStayDetails } from '@/utils/actions';
 import { redirect } from 'next/navigation';
@@ -14,10 +14,17 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 
 	if (!stay) redirect('/stays');
 
+	const { id, stayTagline, stayTitle } = stay;
+
 	return (
-		<PageContainer name={stay.stayTitle}>
-			<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
-			<p> Жильё № {params.stayId}</p>
+		<PageContainer name={stayTitle}>
+			<div className='flex justify-between items-start w-full'>
+				<h1 className='title-level_1 w-full lg:w-1/2'>{stayTagline}</h1>
+				<div className='flex gap-x-4'>
+					<ShareButton name={stayTitle} />
+					<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
+				</div>
+			</div>
 		</PageContainer>
 	);
 }
