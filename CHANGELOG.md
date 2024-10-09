@@ -1,3 +1,10 @@
+# [1.41.0](https://github.com/NikDoe/livo/compare/v1.40.0...v1.41.0) (2024-10-09)
+
+
+### Features
+
+* add popover share button and housing model field in DB ([2e9dfaf](https://github.com/NikDoe/livo/commit/2e9dfaf592f481459986bf9fe78109c3501ed961))
+
 # [1.40.0](https://github.com/NikDoe/livo/compare/v1.39.0...v1.40.0) (2024-10-03)
 
 
