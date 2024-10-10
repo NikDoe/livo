@@ -1,8 +1,11 @@
-import { PageContainer, ShareButton } from '@/components/common';
-import { FavoriteToggleButton } from '@/components/mainPages';
+import { PageContainer, ShareButton, ImageContainer } from '@/components/common';
+import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { fetchStayDetails } from '@/utils/actions';
+import { findCountryByCode, formattedCountries } from '@/utils/countries';
 import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
+import { title } from 'process';
+import { IoFlagOutline } from 'react-icons/io5';
 
 type SingleStayPageProps = {
 	params: {
@@ -15,7 +18,7 @@ export async function generateMetadata({ params }: SingleStayPageProps): Promise
 
 	const stayTitle = stay?.stayTitle;
 	const stayDescription = 'Узнайте больше о данном жилье, включая описание, стоимость аренды, удобства и местоположение.';
-	const stayKeywords = ['жилье', 'аренда', 'жилье', 'недвижимость', 'квартира'];
+	const stayKeywords = ['жилье', 'аренда'];
 
 	return {
 		title: stayTitle,
@@ -29,17 +32,29 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 
 	if (!stay) redirect('/stays');
 
-	const { id, stayTagline, stayTitle } = stay;
+	const { id, stayTagline, stayTitle, countryCode, image } = stay;
+
+	const country = findCountryByCode(countryCode);
 
 	return (
 		<PageContainer name={stayTitle}>
-			<div className='flex justify-between items-start w-full'>
-				<h1 className='title-level_1 w-full lg:w-1/2'>{stayTagline}</h1>
+			<header className='flex justify-between items-start w-full'>
+				<div className='flex flex-col w-full lg:w-1/2'>
+					<h1 className='title-level_1 mb-4'>{stayTagline}</h1>
+					<div className='flex gap-x-4 items-center'>
+						<Rating inPage id={id} />
+						<div className='flex gap-x-1 items-center text-muted-foreground'>
+							<IoFlagOutline />
+							<p>{country?.name}</p>
+						</div>
+					</div>
+				</div>
 				<div className='flex gap-x-4'>
 					<ShareButton name={stayTitle} />
 					<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
 				</div>
-			</div>
+			</header>
+			<ImageContainer mainImage={image} name={title} />
 		</PageContainer>
 	);
 }

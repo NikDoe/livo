@@ -54,7 +54,7 @@ export const fetchStays = async ({
 		select: {
 			id: true,
 			stayTitle: true,
-			country: true,
+			countryCode: true,
 			image: true,
 			price: true,
 			amenities: true,

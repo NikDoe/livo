@@ -19,9 +19,6 @@ export const createProfileAction = async (
 		const rawData = Object.fromEntries(formData);
 		const validatedFields = validateWithZodSchema(profileSchema, rawData);
 
-		console.log(validatedFields);
-
-
 		await db.profile.create({
 			data: {
 				clerkId: user.id,

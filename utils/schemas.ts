@@ -86,7 +86,7 @@ export const staySchema = z.object({
 			},
 			{ message: 'описание должно быть от 10 до 1000 слов', }
 		),
-	country: z
+	countryCode: z
 		.string(),
 	guests: z.coerce
 		.number()
