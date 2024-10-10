@@ -1,3 +1,10 @@
+# [1.46.0](https://github.com/NikDoe/livo/compare/v1.45.0...v1.46.0) (2024-10-10)
+
+
+### Features
+
+* add component for displaying user information ([15df500](https://github.com/NikDoe/livo/commit/15df500a388fb052f63743e100483ffb67b8841f))
+
 # [1.45.0](https://github.com/NikDoe/livo/compare/v1.44.0...v1.45.0) (2024-10-10)
 
 
