@@ -32,7 +32,7 @@ model Stay {
   stayTagline String
   category    String
   image       String
-  country     String
+  countryCode String
   description String
   price       Int
   guests      Int
