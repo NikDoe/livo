@@ -1,3 +1,10 @@
+# [1.45.0](https://github.com/NikDoe/livo/compare/v1.44.0...v1.45.0) (2024-10-10)
+
+
+### Features
+
+* add component for displaying housing details ([3725fa6](https://github.com/NikDoe/livo/commit/3725fa6c675c82c8d95ef0c1b0aee30475367df6))
+
 # [1.44.0](https://github.com/NikDoe/livo/compare/v1.43.0...v1.44.0) (2024-10-10)
 
 
