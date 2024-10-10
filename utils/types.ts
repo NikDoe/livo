@@ -13,7 +13,7 @@ export type StayCardProps = {
     image: string;
     id: string;
     stayTitle: string;
-    country: string;
+    countryCode: string;
     price: number;
     amenities: string;
 };

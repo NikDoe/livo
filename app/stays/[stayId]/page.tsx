@@ -1,7 +1,8 @@
-import { PageContainer, ShareButton, ImageContainer } from '@/components/common';
+import { PageContainer, ShareButton, ImageContainer, BookingCalendar } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { fetchStayDetails } from '@/utils/actions';
-import { findCountryByCode, formattedCountries } from '@/utils/countries';
+import { findCountryByCode } from '@/utils/countries';
+import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
 import { redirect } from 'next/navigation';
 import { title } from 'process';
@@ -32,7 +33,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 
 	if (!stay) redirect('/stays');
 
-	const { id, stayTagline, stayTitle, countryCode, image } = stay;
+	const { id, stayTagline, stayTitle, countryCode, image, price } = stay;
 
 	const country = findCountryByCode(countryCode);
 
@@ -55,6 +56,23 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 				</div>
 			</header>
 			<ImageContainer mainImage={image} name={title} />
+			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12'>
+				<div className='lg:col-span-8'>
+					<div className='flex gap-x-4 items-center'>
+						Информация
+					</div>
+				</div>
+				<div
+					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
+				>
+					<p className='title-level_1 mb-2'>
+						{formatCurrency(price)}
+						<span className='text-muted-foreground'> / ночь</span>
+					</p>
+					<Rating inPage id={id} />
+					<BookingCalendar />
+				</div>
+			</section>
 		</PageContainer>
 	);
 }
