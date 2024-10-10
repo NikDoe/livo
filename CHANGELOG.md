@@ -1,3 +1,10 @@
+# [1.44.0](https://github.com/NikDoe/livo/compare/v1.43.0...v1.44.0) (2024-10-10)
+
+
+### Features
+
+* add custom DatePicker component and reservation form block template ([30442d1](https://github.com/NikDoe/livo/commit/30442d1b381bef73e6cf2bf12fd387cbee26e305))
+
 # [1.43.0](https://github.com/NikDoe/livo/compare/v1.42.0...v1.43.0) (2024-10-10)
 
 
