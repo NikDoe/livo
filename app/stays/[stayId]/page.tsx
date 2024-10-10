@@ -1,5 +1,7 @@
 import { PageContainer, ShareButton, ImageContainer, BookingCalendar } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
+import { StayDetails } from '@/components/mainPages/staysPage';
+import { Separator } from '@/components/ui/separator';
 import { fetchStayDetails } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
@@ -33,7 +35,19 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 
 	if (!stay) redirect('/stays');
 
-	const { id, stayTagline, stayTitle, countryCode, image, price } = stay;
+	const {
+		id,
+		stayTagline,
+		stayTitle,
+		countryCode,
+		image,
+		price,
+		beds,
+		bedrooms,
+		baths,
+		guests
+	} = stay;
+	const details = { beds, bedrooms, baths, guests };
 
 	const country = findCountryByCode(countryCode);
 
@@ -58,9 +72,12 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 			<ImageContainer mainImage={image} name={title} />
 			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12'>
 				<div className='lg:col-span-8'>
-					<div className='flex gap-x-4 items-center'>
-						Информация
-					</div>
+					<p className='text-muted-foreground'>
+						размещено
+						<span className='text-foreground'> NikDoe</span>
+					</p>
+					<Separator className='h-[0.5px] my-6' />
+					<StayDetails details={details} />
 				</div>
 				<div
 					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
