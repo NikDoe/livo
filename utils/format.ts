@@ -7,3 +7,11 @@ export const formatCurrency = (amount: number | null) => {
 		maximumFractionDigits: 0,
 	}).format(value);
 };
+
+export const formatText = (str: string, maxLength: number = 20): string => {
+	if (str.length > maxLength) {
+		return str.slice(0, maxLength) + '...';
+	}
+
+	return str;
+};
