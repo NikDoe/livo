@@ -1,7 +1,8 @@
 'use client';
 
 import { Label } from '@/components/ui/label';
-import { formattedCountries, truncateCountryName } from '@/utils/countries';
+import { formattedCountries } from '@/utils/countries';
+import { formatText } from '@/utils/format';
 import {
 	Select,
 	SelectContent,
@@ -34,7 +35,7 @@ function CountriesInput({ placeholder }: { placeholder?: string }) {
 								key={item.code}
 								value={item.code}
 							>
-								{truncateCountryName(item.name, COUNTRY_NAME_MAX_LENGTH)}
+								{formatText(item.name, COUNTRY_NAME_MAX_LENGTH)}
 							</SelectItem>
 						);
 					})}

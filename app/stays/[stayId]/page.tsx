@@ -1,4 +1,4 @@
-import { PageContainer, ShareButton, ImageContainer, BookingCalendar } from '@/components/common';
+import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
@@ -45,9 +45,14 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 		beds,
 		bedrooms,
 		baths,
-		guests
+		guests,
+		profile
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
+	const profileData = {
+		profileImage: profile.profileImage,
+		username: profile.displayName
+	};
 
 	const country = findCountryByCode(countryCode);
 
@@ -72,10 +77,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 			<ImageContainer mainImage={image} name={title} />
 			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12'>
 				<div className='lg:col-span-8'>
-					<p className='text-muted-foreground'>
-						размещено
-						<span className='text-foreground'> NikDoe</span>
-					</p>
+					<UserInfo profileData={profileData} />
 					<Separator className='h-[0.5px] my-6' />
 					<StayDetails details={details} />
 				</div>
