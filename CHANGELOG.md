@@ -1,3 +1,10 @@
+# [1.43.0](https://github.com/NikDoe/livo/compare/v1.42.0...v1.43.0) (2024-10-10)
+
+
+### Features
+
+* add image component to dynamic page and update housing model ([3483985](https://github.com/NikDoe/livo/commit/34839857f72973dc2186411fe3e2f0386aadd30e))
+
 # [1.42.0](https://github.com/NikDoe/livo/compare/v1.41.0...v1.42.0) (2024-10-09)
 
 
