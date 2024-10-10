@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { Calendar } from '@/components/ui/calendar';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { DateRange } from 'react-day-picker';
+import { ru } from 'date-fns/locale';
 import { Button } from '@/components/ui/button';
 import { CiCalendar } from 'react-icons/ci';
 
@@ -33,6 +34,7 @@ function BookingCalendar() {
 					defaultMonth={currentDate}
 					selected={range}
 					onSelect={setRange}
+					locale={ru}
 				/>
 			</PopoverContent>
 		</Popover>
