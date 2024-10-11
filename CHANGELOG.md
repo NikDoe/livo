@@ -1,3 +1,10 @@
+# [1.49.0](https://github.com/NikDoe/livo/compare/v1.48.0...v1.49.0) (2024-10-11)
+
+
+### Features
+
+* add Location component for displaying on map ([27fded2](https://github.com/NikDoe/livo/commit/27fded23a2526431887e89eb5e13c1f44784aa04))
+
 # [1.48.0](https://github.com/NikDoe/livo/compare/v1.47.0...v1.48.0) (2024-10-11)
 
 
