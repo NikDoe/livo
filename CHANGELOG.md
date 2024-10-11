@@ -1,3 +1,10 @@
+# [1.47.0](https://github.com/NikDoe/livo/compare/v1.46.0...v1.47.0) (2024-10-11)
+
+
+### Features
+
+* add description component for housing and hiking pages ([d1c92dd](https://github.com/NikDoe/livo/commit/d1c92dd703ffe17686924719d469c3fb3b45aee7))
+
 # [1.46.0](https://github.com/NikDoe/livo/compare/v1.45.0...v1.46.0) (2024-10-10)
 
 
