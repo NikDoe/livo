@@ -10,6 +10,7 @@ const markerIcon = icon({
 });
 
 import { findCountryByCode } from '@/utils/countries';
+import { MAP_ZOOM } from '@/utils/constants';
 
 type StayMapProps = {
 	countryCode: string
@@ -28,7 +29,7 @@ function LocationMap({ countryCode }: StayMapProps) {
 				zoomControl={false}
 				className='h-[50vh] rounded-lg relative z-0'
 				center={location || defaultLocation}
-				zoom={7}
+				zoom={MAP_ZOOM}
 			>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

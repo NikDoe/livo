@@ -24,6 +24,7 @@ model Profile {
   updatedAt    DateTime   @updatedAt
   stays        Stay[]
   Favorite     Favorite[]
+  Review       Review[]
 }
 
 model Stay {
@@ -45,16 +46,27 @@ model Stay {
   profile     Profile    @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
   profileId   String
   Favorite    Favorite[]
+  Review      Review[]
 }
 
 model Favorite {
   id        String   @id @default(uuid())
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-
-  profile   Profile @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
+  profile   Profile  @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
   profileId String
+  stay      Stay     @relation(fields: [stayId], references: [id], onDelete: Cascade)
+  stayId    String
+}
 
-  stay   Stay   @relation(fields: [stayId], references: [id], onDelete: Cascade)
-  stayId String
+model Review {
+  id        String   @id @default(uuid())
+  profile   Profile  @relation(fields: [profileId], references: [clerkId], onDelete: Cascade)
+  profileId String
+  stay      Stay     @relation(fields: [stayId], references: [id], onDelete: Cascade)
+  stayId    String
+  rating    Int
+  comment   String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
 }

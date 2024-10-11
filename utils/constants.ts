@@ -13,3 +13,4 @@ export const STAY_TITLE_MAX_LENGTH = 25;
 export const DEFAULT_ARRAY_LENGTH = 4;
 export const DEFAULT_STAY_PRICE = 100;
 export const COUNTRY_TRANSLATION_LANGUAGE = 'rus';
+export const MAP_ZOOM = 4;
