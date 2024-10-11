@@ -1,3 +1,10 @@
+# [1.48.0](https://github.com/NikDoe/livo/compare/v1.47.0...v1.48.0) (2024-10-11)
+
+
+### Features
+
+* add Amenities component ([ecf510b](https://github.com/NikDoe/livo/commit/ecf510b37b4962aefb0215be237c788392b9cc41))
+
 # [1.47.0](https://github.com/NikDoe/livo/compare/v1.46.0...v1.47.0) (2024-10-11)
 
 
