@@ -8,7 +8,7 @@ function Banner(props: BannerProps) {
 	const { imgUrl, text, title } = props;
 	return (
 		<section
-			className='flex flex-col p-20 rounded-2xl -mt-20 mb-20 relative min-h-screen items-center justify-center'
+			className='text-black flex flex-col p-20 rounded-2xl -mt-20 mb-20 relative min-h-screen items-center justify-center'
 			style={{
 				backgroundImage: `url(${imgUrl})`,
 				backgroundSize: 'cover',
