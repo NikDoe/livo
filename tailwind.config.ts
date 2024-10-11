@@ -83,7 +83,7 @@ const config: Config = {
     			'accordion-up': 'accordion-up 0.2s ease-out'
     		}
     	}
-    },
+	},
 	plugins: [require('tailwindcss-animate')],
 };
 export default config;
