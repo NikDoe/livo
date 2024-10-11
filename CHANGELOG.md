@@ -1,3 +1,10 @@
+## [1.49.2](https://github.com/NikDoe/livo/compare/v1.49.1...v1.49.2) (2024-10-11)
+
+
+### Bug Fixes
+
+* display user dropdown menu ([8d1c1a0](https://github.com/NikDoe/livo/commit/8d1c1a074b74f454f74106b5d8a9b7e3dd3be0ec))
+
 ## [1.49.1](https://github.com/NikDoe/livo/compare/v1.49.0...v1.49.1) (2024-10-11)
 
 
