@@ -1,3 +1,10 @@
+# [1.50.0](https://github.com/NikDoe/livo/compare/v1.49.3...v1.50.0) (2024-10-11)
+
+
+### Features
+
+* add Review model in Prisma and update main page banner images ([78d5a5d](https://github.com/NikDoe/livo/commit/78d5a5d93f62b53ee7c918c4f967724c35ca2b9d))
+
 ## [1.49.3](https://github.com/NikDoe/livo/compare/v1.49.2...v1.49.3) (2024-10-11)
 
 
