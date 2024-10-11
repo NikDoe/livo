@@ -4,3 +4,4 @@ export { default as ShareButton } from './ShareButton';
 export { default as ImageContainer } from './ImageContainer';
 export { default as BookingCalendar } from './BookingCalendar';
 export { default as UserInfo } from './UserInfo';
+export { default as Description } from './Description';
