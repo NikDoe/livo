@@ -1,3 +1,10 @@
+## [1.49.3](https://github.com/NikDoe/livo/compare/v1.49.2...v1.49.3) (2024-10-11)
+
+
+### Bug Fixes
+
+* amenities display icons ([d8ac4ad](https://github.com/NikDoe/livo/commit/d8ac4adafa90b1104fe8ba8fe3732b47bf7ad630))
+
 ## [1.49.2](https://github.com/NikDoe/livo/compare/v1.49.1...v1.49.2) (2024-10-11)
 
 
