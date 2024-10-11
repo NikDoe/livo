@@ -4,8 +4,11 @@ import UserIcon from './UserIcon';
 import AuthDropdown from './AuthDropdown';
 import GuestDropdown from './GuestDropdown';
 import { DROPDOWN_MENU_SIDE_OFFSET } from '@/utils/constants';
+import { currentUser } from '@clerk/nextjs/server';
 
-function UserMenuDropdown() {
+async function UserMenuDropdown() {
+	const user = await currentUser();
+
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
@@ -18,8 +21,8 @@ function UserMenuDropdown() {
 				align='end'
 				sideOffset={DROPDOWN_MENU_SIDE_OFFSET}
 			>
-				<GuestDropdown />
-				<AuthDropdown />
+				{!user && <GuestDropdown />}
+				{user && <AuthDropdown />}
 			</DropdownMenuContent>
 		</DropdownMenu>
 	);
