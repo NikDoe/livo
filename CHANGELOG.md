@@ -1,3 +1,10 @@
+## [1.50.1](https://github.com/NikDoe/livo/compare/v1.50.0...v1.50.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* hero banner text color ([8ffc399](https://github.com/NikDoe/livo/commit/8ffc3995c1538647b46c5ada652a0936ceb14cf5))
+
 # [1.50.0](https://github.com/NikDoe/livo/compare/v1.49.3...v1.50.0) (2024-10-11)
 
 
