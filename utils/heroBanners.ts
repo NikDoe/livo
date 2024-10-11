@@ -11,25 +11,25 @@ type HeroBanners = {
 export const heroBanners: HeroBanners[] = [
 	{
 		path: '/cars',
-		imgUrl: '/images/main-pic-4.jpg',
+		imgUrl: '/images/hero-car.jpg',
 		text: 'Дороги ждут вашего приключения',
 		title: 'Откройте мир на колесах',
 	},
 	{
 		path: '/experiences',
-		imgUrl: '/images/main-pic-5.jpg',
+		imgUrl: '/images/hero-exp.jpg',
 		text: 'Присоединяйтесь к уникальным событиям',
 		title: 'Время для незабываемых эмоций',
 	},
 	{
 		path: '/flights',
-		imgUrl: '/images/main-pic-3.jpg',
+		imgUrl: '/images/hero-flight.jpg',
 		text: 'Ваше путешествие начинается здесь',
 		title: 'Взлетайте к новым горизонтам',
 	},
 	{
 		path: '/stays',
-		imgUrl: '/images/main-pic-1.jpg',
+		imgUrl: '/images/hero-stay.jpg',
 		text: 'Найдите свой идеальный уголок',
 		title: 'Комфорт и уют ждут вас',
 	},

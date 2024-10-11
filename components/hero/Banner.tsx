@@ -8,7 +8,7 @@ function Banner(props: BannerProps) {
 	const { imgUrl, text, title } = props;
 	return (
 		<section
-			className='p-20 rounded-2xl -mt-20 mb-20 relative min-h-screen flex items-center justify-center lg:justify-start'
+			className='flex flex-col p-20 rounded-2xl -mt-20 mb-20 relative min-h-screen items-center justify-center'
 			style={{
 				backgroundImage: `url(${imgUrl})`,
 				backgroundSize: 'cover',
@@ -16,18 +16,16 @@ function Banner(props: BannerProps) {
 				backgroundRepeat: 'no-repeat',
 			}}
 		>
-			<div className='w-1/2 text-foreground'>
-				<h1
-					className='text-7xl font-black mb-10'
-				>
-					{title}
-				</h1>
-				<p
-					className='text-lg font-normal'
-				>
-					{text}
-				</p>
-			</div>
+			<h1
+				className='text-7xl font-black -mt-20 mb-10 text-center'
+			>
+				{title}
+			</h1>
+			<p
+				className='text-lg font-normal bg-slate-200 py-2 px-6 rounded-lg'
+			>
+				{text}
+			</p>
 		</section>
 	);
 }
