@@ -1,3 +1,10 @@
+## [1.49.1](https://github.com/NikDoe/livo/compare/v1.49.0...v1.49.1) (2024-10-11)
+
+
+### Bug Fixes
+
+* eslint errors before deploy ([4de4270](https://github.com/NikDoe/livo/commit/4de4270b3a8293b6d2177defa51a83a47a80344d))
+
 # [1.49.0](https://github.com/NikDoe/livo/compare/v1.48.0...v1.49.0) (2024-10-11)
 
 
