@@ -2,13 +2,23 @@ import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo, 
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
+import { Skeleton } from '@/components/ui/skeleton';
 import { fetchStayDetails } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
+import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
 import { title } from 'process';
 import { IoFlagOutline } from 'react-icons/io5';
+
+const DynamicMap = dynamic(
+	() => import('@/components/common/LocationMap'),
+	{
+		ssr: false,
+		loading: () => <Skeleton className='h-[400px] w-full' />,
+	}
+);
 
 type SingleStayPageProps = {
 	params: {
@@ -84,6 +94,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<StayDetails details={details} />
 					<Description description={description} />
 					<Amenities amenities={amenities} />
+					<DynamicMap countryCode={countryCode} />
 				</div>
 				<div
 					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
