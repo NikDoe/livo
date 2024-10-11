@@ -1,6 +1,6 @@
 import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo, Description } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
-import { StayDetails } from '@/components/mainPages/staysPage';
+import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 import { fetchStayDetails } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
@@ -48,6 +48,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 		guests,
 		profile,
 		description,
+		amenities,
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
 	const profileData = {
@@ -82,6 +83,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<Separator className='h-[0.5px] my-6' />
 					<StayDetails details={details} />
 					<Description description={description} />
+					<Amenities amenities={amenities} />
 				</div>
 				<div
 					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
