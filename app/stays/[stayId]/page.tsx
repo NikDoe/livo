@@ -1,4 +1,4 @@
-import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo } from '@/components/common';
+import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo, Description } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
@@ -46,7 +46,8 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 		bedrooms,
 		baths,
 		guests,
-		profile
+		profile,
+		description,
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
 	const profileData = {
@@ -75,11 +76,12 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 				</div>
 			</header>
 			<ImageContainer mainImage={image} name={title} />
-			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12'>
+			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12 items-start'>
 				<div className='lg:col-span-8'>
 					<UserInfo profileData={profileData} />
 					<Separator className='h-[0.5px] my-6' />
 					<StayDetails details={details} />
+					<Description description={description} />
 				</div>
 				<div
 					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
