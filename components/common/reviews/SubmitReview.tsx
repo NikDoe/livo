@@ -30,6 +30,7 @@ function SubmitReview(props: SubmitReviewProps) {
 				rows={1}
 				name='comment'
 				defaultValue='Ваш комментарий...'
+				required={false}
 			/>
 			<SubmitButton text='Оставить отзыв' className='mt-4' />
 		</FormContainer>
