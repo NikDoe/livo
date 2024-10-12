@@ -1,3 +1,5 @@
+'use server';
+
 export const createStayReviewAction = async () => {
 	return { message: 'добавить отзыв' };
 };

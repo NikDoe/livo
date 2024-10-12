@@ -1,15 +1,22 @@
-import { PageContainer, ShareButton, ImageContainer, BookingCalendar, UserInfo, Description } from '@/components/common';
+import {
+	PageContainer,
+	ShareButton,
+	ImageContainer,
+	BookingCalendar,
+	UserInfo,
+	Description,
+	SubmitReview
+} from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
-import { fetchStayDetails } from '@/utils/actions';
+import { createStayReviewAction, fetchStayDetails } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
 import dynamic from 'next/dynamic';
 import { redirect } from 'next/navigation';
-import { title } from 'process';
 import { IoFlagOutline } from 'react-icons/io5';
 
 const DynamicMap = dynamic(
@@ -86,7 +93,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
 				</div>
 			</header>
-			<ImageContainer mainImage={image} name={title} />
+			<ImageContainer mainImage={image} name={stayTitle} />
 			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12 items-start'>
 				<div className='lg:col-span-8'>
 					<UserInfo profileData={profileData} />
@@ -105,6 +112,18 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					</p>
 					<Rating inPage id={id} />
 					<BookingCalendar />
+				</div>
+			</section>
+			<Separator className='h-[0.5px] my-20' />
+			<section className='flex gap-x-20 items-start'>
+				<div className='w-1/3 p-6 rounded-3xl border items-start'>карточка пользователя этого жилья</div>
+				<div className='w-2/3'>
+					<h1 className='title-level_2 mb-10'>Оставьте отзыв</h1>
+					<SubmitReview
+						id={id}
+						createReviewAction={createStayReviewAction}
+						title={stayTitle}
+					/>
 				</div>
 			</section>
 		</PageContainer>

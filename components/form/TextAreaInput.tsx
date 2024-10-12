@@ -15,15 +15,19 @@ const tempDefaultDescription =
 function TextAreaInput(props: TextAreaInputProps) {
 	const { name, defaultValue, labelText, rows } = props;
 
+	const labelElement = (
+		<Label htmlFor={name} className='uppercase'>
+			{labelText}
+		</Label>
+	);
+
 	return (
 		<>
-			<Label htmlFor={name} className='uppercase'>
-				{labelText || name}
-			</Label>
+			{labelText ? labelElement : null}
 			<Textarea
 				id={name}
 				name={name}
-				defaultValue={defaultValue || tempDefaultDescription}
+				placeholder={defaultValue}
 				rows={rows || TEXTAREA_DEFAULT_ROWS_NUMBER}
 				required
 				className='leading-loose mt-2'
