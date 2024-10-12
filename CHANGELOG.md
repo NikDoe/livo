@@ -1,3 +1,12 @@
+# [1.51.0](https://github.com/NikDoe/livo/compare/v1.50.1...v1.51.0) (2024-10-12)
+
+
+### Features
+
+* add action to submit reviews to database ([60e9a6d](https://github.com/NikDoe/livo/commit/60e9a6da8d3eb0e5182307674c7e1ffe975bb7b6))
+* add foundation for user review functionality ([305c936](https://github.com/NikDoe/livo/commit/305c93606cee9a60d40fd5da7b544eb61c76cbe3))
+* add rating and review form ([a02852a](https://github.com/NikDoe/livo/commit/a02852a02389c825083189bb67947cfac7594823))
+
 ## [1.50.1](https://github.com/NikDoe/livo/compare/v1.50.0...v1.50.1) (2024-10-11)
 
 
