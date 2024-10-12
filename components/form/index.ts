@@ -8,3 +8,4 @@ export { default as CategoriesInput } from './CategoriesInput';
 export { default as TextAreaInput } from './TextAreaInput';
 export { default as CountriesInput } from './CountriesInput';
 export { default as CounterInput } from './CounterInput';
+export { default as RatingInput } from './RatingInput';

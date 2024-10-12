@@ -1,0 +1,45 @@
+import { Label } from '@/components/ui/label';
+import {
+	Select,
+	SelectContent,
+	SelectItem,
+	SelectTrigger,
+	SelectValue,
+} from '@/components/ui/select';
+
+const RatingInput = ({
+	name,
+	labelText,
+}: {
+	name: string;
+	labelText?: string;
+}) => {
+	const numbers = Array.from({ length: 5 }, (_, i) => {
+		const value = i + 1;
+		return value.toString();
+	});
+
+	return (
+		<div className='max-w-20'>
+			<Label htmlFor={name}>
+				{labelText || name}
+			</Label>
+			<Select defaultValue={numbers[0]} name={name} required>
+				<SelectTrigger>
+					<SelectValue />
+				</SelectTrigger>
+				<SelectContent>
+					{numbers.map((number) => {
+						return (
+							<SelectItem key={number} value={number}>
+								{number}
+							</SelectItem>
+						);
+					})}
+				</SelectContent>
+			</Select>
+		</div>
+	);
+};
+
+export default RatingInput;

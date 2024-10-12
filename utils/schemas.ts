@@ -115,3 +115,18 @@ export const staySchema = z.object({
 	amenities: z
 		.string(),
 });
+
+export const createReviewSchema = z.object({
+	itemId: z
+		.string(),
+	rating: z.coerce
+		.number()
+		.int()
+		.min(1)
+		.max(5),
+	comment: z
+		.string()
+		.min(1)
+		.max(1000)
+		.or(z.literal(''))
+});
