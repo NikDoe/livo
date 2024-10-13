@@ -1,3 +1,10 @@
+# [1.52.0](https://github.com/NikDoe/livo/compare/v1.51.0...v1.52.0) (2024-10-13)
+
+
+### Features
+
+* add review list component for dynamic page ([0327e41](https://github.com/NikDoe/livo/commit/0327e419ff3fca60b94d5e1cc39260471d409f92))
+
 # [1.51.0](https://github.com/NikDoe/livo/compare/v1.50.1...v1.51.0) (2024-10-12)
 
 
