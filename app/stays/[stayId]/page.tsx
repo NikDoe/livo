@@ -5,13 +5,14 @@ import {
 	BookingCalendar,
 	UserInfo,
 	Description,
-	SubmitReview
+	SubmitReview,
+	Reviews
 } from '@/components/common';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
-import { createStayReviewAction, fetchStayDetails } from '@/utils/actions';
+import { createStayReviewAction, fetchStayDetails, fetchStayReviews } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
@@ -118,12 +119,14 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 			<section className='flex gap-x-20 items-start'>
 				<div className='w-1/3 p-6 rounded-3xl border items-start'>карточка пользователя этого жилья</div>
 				<div className='w-2/3'>
-					<h1 className='title-level_2 mb-10'>Оставьте отзыв</h1>
+					<h1 className='title-level_2 mb-2'>Оставьте отзыв</h1>
 					<SubmitReview
 						id={id}
 						createReviewAction={createStayReviewAction}
 						title={stayTitle}
 					/>
+					<Separator className='h-[0.5px] my-10' />
+					<Reviews fetchReviews={fetchStayReviews} id={id} />
 				</div>
 			</section>
 		</PageContainer>

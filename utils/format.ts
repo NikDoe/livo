@@ -17,6 +17,15 @@ export const formatText = (str: string, maxLength: number = 20): string => {
 };
 
 const convertToGenitive = (word: string): string => {
+	const prepositions = [
+		'в', 'во', 'на', 'на', 'к', 'с', 'со', 'из', 'от', 'до',
+		'для', 'по', 'об', 'о', 'за', 'между', 'при', 'без', 'через',
+		'вдоль', 'вместо', 'кроме', 'напротив', 'по поводу', 'среди'
+	];
+
+	// обработка предлогов
+	if (prepositions.includes(word)) return word;
+
 	if (word.endsWith('ая')) return word.slice(0, -2) + 'ой';
 	if (word.endsWith('яя')) return word.slice(0, -2) + 'ей';
 
