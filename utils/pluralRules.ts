@@ -64,11 +64,11 @@ export const getPluralBaths = (count: number) => {
 	return getPluralValues(count, rules);
 };
 
-export const getPluralComments = (count: number) => {
+export const getPluralReviews = (count: number) => {
 	const rules = [
-		'комментарий',
-		'комментария',
-		'комментариев',
+		'отзыв',
+		'отзыва',
+		'отзывов',
 	];
 
 	return getPluralValues(count, rules);

@@ -60,3 +60,23 @@ export const fetchStayReviewsByUser = async () => {
 export const deleteStayReviewAction = async () => {
 	return { message: 'удалить отзыв' };
 };
+
+export async function fetchStayRating(stayId: string) {
+	const result = await db.stayReview.groupBy({
+		by: ['stayId'],
+		_avg: {
+			rating: true,
+		},
+		_count: {
+			rating: true,
+		},
+		where: {
+			stayId,
+		},
+	});
+
+	return {
+		rating: result[0]?._avg.rating?.toFixed(1) ?? 0,
+		count: result[0]?._count.rating ?? 0,
+	};
+}

@@ -24,4 +24,5 @@ export {
 	deleteStayReviewAction,
 	fetchStayReviews,
 	fetchStayReviewsByUser,
+	fetchStayRating,
 } from './reviews/stayReviewAction';
