@@ -33,3 +33,8 @@ export type FetchReviews = {
         profileImage: string;
     };
 }
+
+export type FetchRating = {
+    rating: string | number;
+    count: number;
+}

@@ -16,13 +16,13 @@ function ReviewCard({ reviewInfo, children }: ReviewCardProps) {
 	const { comment, image, name, rating } = reviewInfo;
 
 	return (
-		<div className='flex mt-5 gap-x-2 border-b-[0.5px] pb-5'>
+		<div className='flex mt-5 gap-x-4 border-b-[0.5px] pb-5'>
 			<Image
 				alt='profile'
 				src={image}
 				width={100}
 				height={100}
-				className='w-12 h-12 rounded-full object-cover'
+				className='w-12 h-12 rounded-full object-cover border'
 			/>
 			<div className='flex flex-col w-full'>
 				<div className='flex justify-between mb-2'>

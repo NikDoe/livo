@@ -8,11 +8,12 @@ import {
 	SubmitReview,
 	Reviews
 } from '@/components/common';
+import ReviewSection from '@/components/common/reviews/ReviewSection';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
-import { createStayReviewAction, fetchStayDetails, fetchStayReviews } from '@/utils/actions';
+import { createStayReviewAction, fetchStayDetails, fetchStayRating, fetchStayReviews } from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
@@ -82,7 +83,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 				<div className='flex flex-col w-full lg:w-1/2'>
 					<h1 className='title-level_1 mb-4'>{stayTagline}</h1>
 					<div className='flex gap-x-4 items-center'>
-						<Rating inPage id={id} />
+						<Rating inPage id={id} fetchRating={fetchStayRating} />
 						<div className='flex gap-x-1 items-center text-muted-foreground'>
 							<IoFlagOutline />
 							<p>{country?.name}</p>
@@ -104,14 +105,15 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<Amenities amenities={amenities} />
 					<DynamicMap countryCode={countryCode} />
 				</div>
-				<div
-					className='lg:col-span-4 flex flex-col p-10 rounded-xl border'
-				>
+				<div className='lg:col-span-4 flex flex-col p-10 rounded-xl border'>
 					<p className='title-level_1 mb-2'>
-						{formatCurrency(price)}
-						<span className='text-muted-foreground'> / ночь</span>
+						<span
+							className='text-muted-foreground'
+						>
+							{formatCurrency(price)} / ночь
+						</span>
 					</p>
-					<Rating inPage id={id} />
+					<Rating inPage id={id} fetchRating={fetchStayRating} />
 					<BookingCalendar />
 				</div>
 			</section>
@@ -119,14 +121,12 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 			<section className='flex gap-x-20 items-start'>
 				<div className='w-1/3 p-6 rounded-3xl border items-start'>карточка пользователя этого жилья</div>
 				<div className='w-2/3'>
-					<h1 className='title-level_2 mb-2'>Оставьте отзыв</h1>
-					<SubmitReview
-						id={id}
+					<ReviewSection
 						createReviewAction={createStayReviewAction}
+						fetchReviews={fetchStayReviews}
+						id={id}
 						title={stayTitle}
 					/>
-					<Separator className='h-[0.5px] my-10' />
-					<Reviews fetchReviews={fetchStayReviews} id={id} />
 				</div>
 			</section>
 		</PageContainer>

@@ -7,6 +7,7 @@ import Rating from '../common/Rating';
 import { StayCardProps } from '@/utils/types';
 import { STAY_TITLE_MAX_LENGTH } from '@/utils/constants';
 import { formatCurrency, formatText } from '@/utils/format';
+import { fetchStayRating } from '@/utils/actions';
 
 type Props = {
 	stay: StayCardProps;
@@ -36,7 +37,7 @@ function StayCard({ stay }: Props) {
 					<Separator className='h-[0.5px] my-4' />
 					<div className='flex justify-between'>
 						<span className='text-sm font-bold'>{formatCurrency(price)}/ночь</span>
-						<Rating inPage={false} id={stayId} />
+						<Rating inPage={false} id={stayId} fetchRating={fetchStayRating} />
 					</div>
 				</div>
 			</Link>
