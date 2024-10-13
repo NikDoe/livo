@@ -1,3 +1,10 @@
+# [1.53.0](https://github.com/NikDoe/livo/compare/v1.52.0...v1.53.0) (2024-10-13)
+
+
+### Features
+
+* implement rating display logic based on reviews ([f7c1768](https://github.com/NikDoe/livo/commit/f7c17680efedaec7feb703780f0e30f7ad80bd02))
+
 # [1.52.0](https://github.com/NikDoe/livo/compare/v1.51.0...v1.52.0) (2024-10-13)
 
 
