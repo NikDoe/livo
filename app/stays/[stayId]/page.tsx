@@ -68,6 +68,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 		profile,
 		description,
 		amenities,
+
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
 	const profileData = {
@@ -124,6 +125,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<ReviewSection
 						createReviewAction={createStayReviewAction}
 						fetchReviews={fetchStayReviews}
+						clerkId={profile.clerkId}
 						id={id}
 						title={stayTitle}
 					/>

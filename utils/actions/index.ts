@@ -25,4 +25,5 @@ export {
 	fetchStayReviews,
 	fetchStayReviewsByUser,
 	fetchStayRating,
+	findExistingStayReviewByUser,
 } from './reviews/stayReviewAction';

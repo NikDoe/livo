@@ -80,3 +80,15 @@ export async function fetchStayRating(stayId: string) {
 		count: result[0]?._count.rating ?? 0,
 	};
 }
+
+export const findExistingStayReviewByUser = async (
+	userId: string,
+	stayId: string
+) => {
+	return db.stayReview.findFirst({
+		where: {
+			profileId: userId,
+			stayId,
+		},
+	});
+};
