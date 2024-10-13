@@ -1,3 +1,10 @@
+# [1.54.0](https://github.com/NikDoe/livo/compare/v1.53.0...v1.54.0) (2024-10-13)
+
+
+### Features
+
+* restrict users from submitting duplicate reviews or reviewing their own listings ([1702293](https://github.com/NikDoe/livo/commit/170229395955278ed0245bb4d9490758dd6042ea))
+
 # [1.53.0](https://github.com/NikDoe/livo/compare/v1.52.0...v1.53.0) (2024-10-13)
 
 
