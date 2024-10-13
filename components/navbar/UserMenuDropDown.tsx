@@ -12,7 +12,7 @@ async function UserMenuDropdown() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button size='icon' className='rounded-full ml-6'>
+				<Button size='icon' className='rounded-full ml-auto md:ml-6 '>
 					<UserIcon />
 				</Button>
 			</DropdownMenuTrigger>

@@ -37,7 +37,7 @@ function AuthDropdown() {
 					Организовать мероприятие
 				</Link>
 			</DropdownMenuItem>
-			<div className='flex space-x-2'>
+			<div className='flex flex-col sm:flex-row gap-2'>
 				<Button asChild className='w-full'>
 					<Link href='/account'>Аккаунт</Link>
 				</Button>

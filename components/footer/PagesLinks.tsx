@@ -4,7 +4,7 @@ import MainPagesLinks from './MainPagesLinks';
 
 function PagesLinks() {
 	return (
-		<div className='flex flex-grow justify-evenly'>
+		<div className='w-full flex flex-col sm:flex-row sm:justify-between'>
 
 			<MainPagesLinks />
 

@@ -7,8 +7,8 @@ function Footer() {
 	return (
 		<footer className='container'>
 
-			<div className='flex py-12 items-center'>
-				<div className='space-y-2'>
+			<div className='flex flex-col gap-10 md:flex-row py-6 md:py-12 items-start'>
+				<div className='w-full flex gap-4 md:flex-col justify-between'>
 					<Logo />
 					<DarkMode />
 				</div>
