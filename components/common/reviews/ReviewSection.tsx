@@ -3,20 +3,24 @@ import SubmitReview from './SubmitReview';
 import { Separator } from '@/components/ui/separator';
 import Reviews from './Reviews';
 import type { actionFunction, FetchReviews } from '@/utils/types';
+import { findExistingStayReviewByUser } from '@/utils/actions';
 
 type ReviewSectionProps = {
+	clerkId: string;
 	id: string;
 	title: string;
 	createReviewAction: actionFunction;
 	fetchReviews: (id: string) => Promise<FetchReviews[]>;
 }
 
-function ReviewSection(props: ReviewSectionProps) {
-	const { id, title, createReviewAction, fetchReviews } = props;
-
+async function ReviewSection(props: ReviewSectionProps) {
+	const { clerkId, id, title, createReviewAction, fetchReviews } = props;
 	const { userId } = auth();
+	const isNotOwner = clerkId !== userId;
+	const reviewDoesNotExist =
+		userId && isNotOwner && !(await findExistingStayReviewByUser(userId, id));
 
-	const isShowAddReview = userId;
+	const isShow = userId;
 
 	const addReviewForm = (
 		<>
@@ -32,7 +36,7 @@ function ReviewSection(props: ReviewSectionProps) {
 
 	return (
 		<>
-			{isShowAddReview ? addReviewForm : null}
+			{reviewDoesNotExist && addReviewForm}
 			<Reviews fetchReviews={fetchReviews} id={id} />
 		</>
 	);
