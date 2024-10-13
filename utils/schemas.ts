@@ -67,7 +67,7 @@ export const staySchema = z.object({
 			message: 'Краткое описание должно содержать как минимум 2 символа.',
 		})
 		.max(100, {
-			message: 'Краткое описание содержать не более 100 символов.',
+			message: 'Краткое описание должно содержать не более 100 символов.',
 		}),
 	price: z.coerce
 		.number()
@@ -127,6 +127,8 @@ export const createReviewSchema = z.object({
 	comment: z
 		.string()
 		.min(1)
-		.max(1000)
+		.max(1000, {
+			message: 'Комментарий отзыва не должен превышать 1000 слов'
+		})
 		.or(z.literal(''))
 });

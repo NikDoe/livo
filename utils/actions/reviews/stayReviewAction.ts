@@ -29,8 +29,28 @@ export const createStayReviewAction = async (prevState: any, formData: FormData)
 	}
 };
 
-export const fetchStayReviews = async () => {
-	return { message: 'загрузить отзывы' };
+export const fetchStayReviews = async (stayId: string) => {
+	const reviews = await db.stayReview.findMany({
+		where: {
+			stayId,
+		},
+		select: {
+			id: true,
+			rating: true,
+			comment: true,
+			profile: {
+				select: {
+					displayName: true,
+					profileImage: true,
+				},
+			},
+		},
+		orderBy: {
+			createdAt: 'desc',
+		},
+	});
+
+	return reviews;
 };
 
 export const fetchStayReviewsByUser = async () => {

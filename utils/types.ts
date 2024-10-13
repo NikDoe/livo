@@ -23,3 +23,13 @@ export type MainRoutes = typeof MAIN_ROUTES extends Set<infer U> ? U : never;
 export type Favorites = {
     stays: StayCardProps[]
 }
+
+export type FetchReviews = {
+    comment: string;
+    rating: number;
+    id: string;
+    profile: {
+        displayName: string;
+        profileImage: string;
+    };
+}

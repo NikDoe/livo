@@ -6,3 +6,4 @@ export { default as BookingCalendar } from './BookingCalendar';
 export { default as UserInfo } from './UserInfo';
 export { default as Description } from './Description';
 export { default as SubmitReview } from './reviews/SubmitReview';
+export { default as Reviews } from './reviews/Reviews';
