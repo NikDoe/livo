@@ -1,14 +1,16 @@
+import { timeSinceCreation } from '@/utils/format';
 import Image from 'next/image';
 
 type UserInfoProps = {
 	profileData: {
 		profileImage: string;
 		username: string;
+		registrationTime: Date;
 	};
 };
 
 function UserInfo({ profileData }: UserInfoProps) {
-	const { profileImage, username } = profileData;
+	const { profileImage, username, registrationTime } = profileData;
 
 	return (
 		<article className='grid grid-cols-[auto,1fr] gap-4'>
@@ -25,7 +27,7 @@ function UserInfo({ profileData }: UserInfoProps) {
 					<span className='font-bold text-foreground'> {username}</span>
 				</p>
 				<p>
-					2 года назад
+					{timeSinceCreation(registrationTime)}
 				</p>
 			</div>
 		</article>

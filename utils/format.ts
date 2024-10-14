@@ -53,3 +53,56 @@ export function choosePreposition(phrase: string): string {
 
 	return `${preposition} ${firstWordCorrected} ${secondWordCorrected} ${words.slice(2).join(' ')}`.toLowerCase();
 }
+
+export function formatRegistrationDate(isoDate: Date): string {
+	const date = new Date(isoDate);
+
+	const options: Intl.DateTimeFormatOptions = {
+		year: 'numeric',
+		month: 'short',
+		day: 'numeric',
+	};
+
+	const formattedDate = date.toLocaleDateString('ru-RU', options);
+
+	return `Зарегистрирован с ${formattedDate}`;
+}
+
+function declineWord(count: number, singular: string, pluralOne: string, pluralMany: string): string {
+	if (count % 10 === 1 && count % 100 !== 11) {
+		return singular;
+	} else if (count % 10 >= 2 && count % 10 <= 4 && (count % 100 < 10 || count % 100 >= 20)) {
+		return pluralOne;
+	} else {
+		return pluralMany;
+	}
+}
+
+export function timeSinceCreation(isoDate: Date): string {
+	const createdDate = new Date(isoDate);
+	const currentDate = new Date();
+
+	const diffInMs = currentDate.getTime() - createdDate.getTime();
+	const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+	const diffInHours = Math.floor(diffInMinutes / 60);
+	const diffInDays = Math.floor(diffInHours / 24);
+	const diffInWeeks = Math.floor(diffInDays / 7);
+	const diffInMonths = Math.floor(diffInDays / 30);
+	const diffInYears = Math.floor(diffInMonths / 12);
+
+	if (diffInYears >= 1) {
+		return `${diffInYears} ${declineWord(diffInYears, 'год', 'года', 'лет')} назад`;
+	} else if (diffInMonths >= 1) {
+		return `${diffInMonths} ${declineWord(diffInMonths, 'месяц', 'месяца', 'месяцев')} назад`;
+	} else if (diffInWeeks >= 1) {
+		return `${diffInWeeks} ${declineWord(diffInWeeks, 'неделя', 'недели', 'недель')} назад`;
+	} else if (diffInDays >= 1) {
+		return `${diffInDays} ${declineWord(diffInDays, 'день', 'дня', 'дней')} назад`;
+	} else if (diffInHours >= 1) {
+		return `${diffInHours} ${declineWord(diffInHours, 'час', 'часа', 'часов')} назад`;
+	} else {
+		return 'Меньше часа назад';
+	}
+}
+
+

@@ -5,15 +5,19 @@ import {
 	BookingCalendar,
 	UserInfo,
 	Description,
-	SubmitReview,
-	Reviews
+	ProfileCard
 } from '@/components/common';
 import ReviewSection from '@/components/common/reviews/ReviewSection';
 import { FavoriteToggleButton, Rating } from '@/components/mainPages';
 import { Amenities, StayDetails } from '@/components/mainPages/staysPage';
 import { Separator } from '@/components/ui/separator';
 import { Skeleton } from '@/components/ui/skeleton';
-import { createStayReviewAction, fetchStayDetails, fetchStayRating, fetchStayReviews } from '@/utils/actions';
+import {
+	createStayReviewAction,
+	fetchStayDetails,
+	fetchStayRating,
+	fetchStayReviews
+} from '@/utils/actions';
 import { findCountryByCode } from '@/utils/countries';
 import { formatCurrency } from '@/utils/format';
 import { type Metadata } from 'next';
@@ -72,8 +76,10 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
 	const profileData = {
+		profileId: profile.clerkId,
 		profileImage: profile.profileImage,
-		username: profile.displayName
+		username: profile.displayName,
+		registrationTime: profile.createdAt,
 	};
 
 	const country = findCountryByCode(countryCode);
@@ -97,7 +103,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 				</div>
 			</header>
 			<ImageContainer mainImage={image} name={stayTitle} className='mt-16' />
-			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12 items-start'>
+			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-16 items-start'>
 				<div className='lg:col-span-8'>
 					<UserInfo profileData={profileData} />
 					<Separator className='h-[0.5px] my-6' />
@@ -120,8 +126,10 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 			</section>
 			<Separator className='h-[0.5px] my-20' />
 			<section className='flex gap-x-20 items-start'>
-				<div className='w-1/3 p-6 rounded-3xl border items-start'>карточка пользователя этого жилья</div>
-				<div className='w-2/3'>
+				<div className='w-1/4'>
+					<ProfileCard profileData={profileData} />
+				</div>
+				<div className='w-3/4'>
 					<ReviewSection
 						createReviewAction={createStayReviewAction}
 						fetchReviews={fetchStayReviews}

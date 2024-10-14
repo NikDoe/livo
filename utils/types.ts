@@ -38,3 +38,10 @@ export type FetchRating = {
     rating: string | number;
     count: number;
 }
+
+export type ProfileCardData = {
+    profileId: string;
+    profileImage: string;
+    username: string;
+    registrationTime: Date;
+};
