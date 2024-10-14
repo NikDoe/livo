@@ -1,3 +1,15 @@
+# [1.57.0](https://github.com/NikDoe/livo/compare/v1.56.0...v1.57.0) (2024-10-14)
+
+
+### Bug Fixes
+
+* remove BookingCalendar from index.ts ([fb9fba8](https://github.com/NikDoe/livo/commit/fb9fba8419738e11016e05e13549236aca1c8968))
+
+
+### Features
+
+* add basic layout & custom types for calendar ([0d70340](https://github.com/NikDoe/livo/commit/0d70340c017f0e6f7482bc96032cf4b6aade6f5e))
+
 # [1.56.0](https://github.com/NikDoe/livo/compare/v1.55.1...v1.56.0) (2024-10-14)
 
 
