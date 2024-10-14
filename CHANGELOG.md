@@ -1,3 +1,10 @@
+## [1.54.1](https://github.com/NikDoe/livo/compare/v1.54.0...v1.54.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* container layout & separator ([31b4260](https://github.com/NikDoe/livo/commit/31b426060a25b5eab46b7bf9d93e8d231b4434ab))
+
 # [1.54.0](https://github.com/NikDoe/livo/compare/v1.53.0...v1.54.0) (2024-10-13)
 
 
