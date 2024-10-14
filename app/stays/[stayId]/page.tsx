@@ -2,7 +2,6 @@ import {
 	PageContainer,
 	ShareButton,
 	ImageContainer,
-	BookingCalendar,
 	UserInfo,
 	Description,
 	ProfileCard
@@ -121,7 +120,6 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 						</span>
 					</p>
 					<Rating inPage id={id} fetchRating={fetchStayRating} />
-					<BookingCalendar />
 				</div>
 			</section>
 			<Separator className='h-[0.5px] my-20' />

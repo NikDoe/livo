@@ -45,3 +45,14 @@ export type ProfileCardData = {
     username: string;
     registrationTime: Date;
 };
+
+export type DateRangeSelect = {
+    startDate: Date;
+    endDate: Date;
+    key: string;
+};
+
+export type Booking = {
+    checkIn: Date;
+    checkOut: Date;
+};
