@@ -1,3 +1,10 @@
+## [1.55.1](https://github.com/NikDoe/livo/compare/v1.55.0...v1.55.1) (2024-10-14)
+
+
+### Bug Fixes
+
+* profile card bg color ([ebcc8c2](https://github.com/NikDoe/livo/commit/ebcc8c2a99fa0c01d0eeddee228b8f08f16ff894))
+
 # [1.55.0](https://github.com/NikDoe/livo/compare/v1.54.1...v1.55.0) (2024-10-14)
 
 
