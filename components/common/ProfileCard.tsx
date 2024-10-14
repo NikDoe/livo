@@ -29,7 +29,7 @@ function ProfileCard({ profileData }: ProfileCardProps) {
 
 	return (
 		<div
-			className='p-6 border rounded-xl flex flex-col items-center gap-8 bg-white'
+			className='p-6 border rounded-xl flex flex-col items-center gap-8 bg-background'
 		>
 			<Image
 				src={profileImage}

@@ -2,7 +2,6 @@ import { Hero } from '@/components/hero';
 import { SearchInput } from '@/components/mainPages';
 import { StaysCategoriesList, StaysContainer } from '@/components/mainPages/staysPage';
 import LoadingStays from '@/components/mainPages/staysPage/LoadingStays';
-import { Separator } from '@/components/ui/separator';
 import { Suspense } from 'react';
 
 type StaysPageProps = {
@@ -20,7 +19,6 @@ async function StaysPage({ searchParams }: StaysPageProps) {
 			<SearchInput placeholder='Найти жильё...' />
 			<div className='flex flex-col'>
 				<h1 className='title-level_1'>Места для вашего отдыха</h1>
-				{/* <Separator /> */}
 			</div>
 			<StaysCategoriesList
 				category={searchParams?.category}
