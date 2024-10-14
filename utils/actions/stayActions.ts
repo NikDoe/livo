@@ -71,6 +71,12 @@ export const fetchStayDetails = (id: string) => {
 		},
 		include: {
 			profile: true,
+			stayBookings: {
+				select: {
+					checkIn: true,
+					checkOut: true,
+				}
+			}
 		},
 	});
 };
