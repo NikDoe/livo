@@ -96,7 +96,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 					<FavoriteToggleButton id={params.stayId} favoriteType='stay' />
 				</div>
 			</header>
-			<ImageContainer mainImage={image} name={stayTitle} />
+			<ImageContainer mainImage={image} name={stayTitle} className='mt-16' />
 			<section className='lg:grid lg:grid-cols-12 gap-x-12 mt-12 items-start'>
 				<div className='lg:col-span-8'>
 					<UserInfo profileData={profileData} />

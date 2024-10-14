@@ -24,7 +24,7 @@ function EmptyList({
 		};
 
 	return (
-		<div className='flex flex-col items-start justify-start'>
+		<div className='container flex flex-col items-start justify-start'>
 			<h2 className='title-level_1'>
 				{heading || defaultHeading}
 			</h2>

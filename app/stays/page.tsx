@@ -15,7 +15,7 @@ type StaysPageProps = {
 async function StaysPage({ searchParams }: StaysPageProps) {
 
 	return (
-		<section className='space-y-10'>
+		<section className='container space-y-10'>
 			<Hero />
 			<SearchInput placeholder='Найти жильё...' />
 			<div className='flex flex-col'>

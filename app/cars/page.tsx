@@ -4,10 +4,10 @@ import { Hero } from '@/components/hero';
 
 function CarsPage() {
 	return (
-		<div>
+		<section className='container'>
 			<Hero />
 			<h1 className='text-3xl'>CarsPage</h1>
-		</div>
+		</section>
 	);
 }
 

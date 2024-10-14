@@ -3,13 +3,14 @@ import Image from 'next/image';
 type ImageContainerProps = {
 	mainImage: string;
 	name: string;
+	className?: string;
 }
 
 function ImageContainer(props: ImageContainerProps) {
-	const { mainImage, name } = props;
+	const { className, mainImage, name } = props;
 
 	return (
-		<section className='h-[300px] md:h-[500px] relative mt-16'>
+		<section className={`h-[300px] md:h-[500px] relative ${className}`}>
 			<Image
 				src={mainImage}
 				fill

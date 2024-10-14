@@ -2,7 +2,6 @@ import { Separator } from '../ui/separator';
 import Logo from './Logo';
 import MainMenu from './MainMenu';
 import UserMenuDropdown from './UserMenuDropDown';
-import ConditionalSeparator from './ConditionalSeparator';
 import MobileMenu from './MobileMenu';
 
 function Navbar() {
@@ -17,7 +16,6 @@ function Navbar() {
 				<UserMenuDropdown />
 				<MobileMenu />
 			</nav>
-			<ConditionalSeparator />
 		</>
 	);
 }

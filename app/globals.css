@@ -4,7 +4,7 @@
 
 @layer components {
 	.container {
-		@apply px-4 mx-auto max-w-6xl xl:max-w-7xl;
+		@apply py-16 px-4 mx-auto max-w-6xl xl:max-w-7xl;
 	}
 
 	.title-level_1 {

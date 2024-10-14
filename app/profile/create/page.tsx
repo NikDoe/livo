@@ -11,7 +11,7 @@ async function CreateProfilePage() {
 	if (user?.privateMetadata?.hasProfile) redirect('/cars');
 
 	return (
-		<section>
+		<section className='container'>
 			<h3 className='text-3xl mb-8'>Создание профиля</h3>
 			<div className='max-w-full lg:max-w-3xl'>
 				<FormContainer action={createProfileAction}>

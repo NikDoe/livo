@@ -12,7 +12,7 @@ function PageContainer(props: PageContainerProps) {
 	const { children, name } = props;
 
 	return (
-		<>
+		<section className='container'>
 			<div className='flex items-center justify-between mb-16'>
 				<Button variant='outline' asChild>
 					<Link href='/'>На главную</Link>
@@ -20,7 +20,7 @@ function PageContainer(props: PageContainerProps) {
 				<BreadCrumbs name={name} />
 			</div>
 			{children}
-		</>
+		</section>
 	);
 }
 

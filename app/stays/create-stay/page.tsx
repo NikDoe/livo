@@ -16,7 +16,7 @@ import { createStayAction } from '@/utils/actions';;
 
 function CreateStay() {
 	return (
-		<section className='flex flex-col lg:flex-row gap-20'>
+		<section className='container flex flex-col lg:flex-row gap-20'>
 			<div className='w-full space-y-10 lg:w-2/3'>
 				<FormHeader />
 				<div className='space-y-20'>
