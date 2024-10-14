@@ -1,3 +1,10 @@
+# [1.56.0](https://github.com/NikDoe/livo/compare/v1.55.1...v1.56.0) (2024-10-14)
+
+
+### Features
+
+* add housing booking model in Prisma ([a32678c](https://github.com/NikDoe/livo/commit/a32678cdd5edd1bc36b8dee3a9357e942f946ca8))
+
 ## [1.55.1](https://github.com/NikDoe/livo/compare/v1.55.0...v1.55.1) (2024-10-14)
 
 
