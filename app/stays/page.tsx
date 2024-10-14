@@ -19,8 +19,8 @@ async function StaysPage({ searchParams }: StaysPageProps) {
 			<Hero />
 			<SearchInput placeholder='Найти жильё...' />
 			<div className='flex flex-col'>
-				<h1 className='title-level_1 mb-8'>Места для вашего отдыха</h1>
-				<Separator />
+				<h1 className='title-level_1'>Места для вашего отдыха</h1>
+				{/* <Separator /> */}
 			</div>
 			<StaysCategoriesList
 				category={searchParams?.category}
