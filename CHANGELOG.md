@@ -1,3 +1,10 @@
+# [1.55.0](https://github.com/NikDoe/livo/compare/v1.54.1...v1.55.0) (2024-10-14)
+
+
+### Features
+
+* add user profile card ([1d2f4b0](https://github.com/NikDoe/livo/commit/1d2f4b0fe0a206478939ef97bb042f0bd58cff15))
+
 ## [1.54.1](https://github.com/NikDoe/livo/compare/v1.54.0...v1.54.1) (2024-10-14)
 
 
