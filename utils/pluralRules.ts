@@ -73,3 +73,13 @@ export const getPluralReviews = (count: number) => {
 
 	return getPluralValues(count, rules);
 };
+
+export const getPluralNights = (count: number) => {
+	const rules = [
+		'ночь',
+		'ночи',
+		'ночей',
+	];
+
+	return getPluralValues(count, rules);
+};
