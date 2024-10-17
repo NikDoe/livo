@@ -27,3 +27,7 @@ export {
 	fetchStayRating,
 	findExistingStayReviewByUser,
 } from './reviews/stayReviewAction';
+
+export {
+	createStayBookingAction,
+} from './bookings/stayBookingActions';
