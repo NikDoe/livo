@@ -1,3 +1,10 @@
+# [1.61.0](https://github.com/NikDoe/livo/compare/v1.60.0...v1.61.0) (2024-10-17)
+
+
+### Features
+
+* restrict housing booking to authenticated users ([e74e0e1](https://github.com/NikDoe/livo/commit/e74e0e1e9fd4aa4991a11ac6fb4a039451ab897e))
+
 # [1.60.0](https://github.com/NikDoe/livo/compare/v1.59.0...v1.60.0) (2024-10-17)
 
 
