@@ -28,7 +28,7 @@ function BookingCalendar() {
 		<Popover>
 			<PopoverTrigger asChild>
 				<div
-					className='flex flex-col gap-y-4 bg-gray-100 rounded-md p-4 cursor-pointer'
+					className='flex flex-col gap-y-4 bg-muted rounded-md p-4 cursor-pointer'
 				>
 					<DateInput text='заезд' date={range?.from} />
 					<Separator />

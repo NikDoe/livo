@@ -44,7 +44,7 @@ type FormRowProps = {
 function FormRow(props: FormRowProps) {
 	const { isDiscountRow = false, isTotalRow = false, amount, label } = props;
 	const totalClassName = isTotalRow
-		? 'bg-gray-100 font-bold'
+		? 'bg-muted font-bold'
 		: '';
 	const formatedAmount = formatCurrency(amount);
 	const amountText = isDiscountRow ? `-${formatedAmount}` : formatedAmount;
