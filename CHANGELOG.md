@@ -1,3 +1,10 @@
+# [1.58.0](https://github.com/NikDoe/livo/compare/v1.57.0...v1.58.0) (2024-10-17)
+
+
+### Features
+
+* integrate Zustand store ([da74288](https://github.com/NikDoe/livo/commit/da74288cc6eb80d2555429f4051548536d9f7784))
+
 # [1.57.0](https://github.com/NikDoe/livo/compare/v1.56.0...v1.57.0) (2024-10-14)
 
 
