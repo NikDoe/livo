@@ -32,6 +32,14 @@ const DynamicMap = dynamic(
 	}
 );
 
+const DynamicBookingWrapper = dynamic(
+	() => import('@/components/common/bookings/BookingWrapper'),
+	{
+		ssr: false,
+		loading: () => <Skeleton className='h-[200px] w-full' />,
+	}
+);
+
 type SingleStayPageProps = {
 	params: {
 		stayId: string
@@ -71,7 +79,7 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 		profile,
 		description,
 		amenities,
-
+		stayBookings,
 	} = stay;
 	const details = { beds, bedrooms, baths, guests };
 	const profileData = {
@@ -120,6 +128,11 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 						</span>
 					</p>
 					<Rating inPage id={id} fetchRating={fetchStayRating} />
+					<DynamicBookingWrapper
+						bookings={stayBookings}
+						price={price}
+						stayId={id}
+					/>
 				</div>
 			</section>
 			<Separator className='h-[0.5px] my-20' />
