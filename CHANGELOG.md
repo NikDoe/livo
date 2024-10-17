@@ -1,3 +1,10 @@
+# [1.60.0](https://github.com/NikDoe/livo/compare/v1.59.0...v1.60.0) (2024-10-17)
+
+
+### Features
+
+* add form for calculating booking values ([a193069](https://github.com/NikDoe/livo/commit/a19306997a9189fa8358f35b6ac30d1d59d3d445))
+
 # [1.59.0](https://github.com/NikDoe/livo/compare/v1.58.0...v1.59.0) (2024-10-17)
 
 
