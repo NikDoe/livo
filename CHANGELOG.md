@@ -1,3 +1,10 @@
+# [1.59.0](https://github.com/NikDoe/livo/compare/v1.58.0...v1.59.0) (2024-10-17)
+
+
+### Features
+
+* add new calendar with check-in & check-out date fields ([cde7f49](https://github.com/NikDoe/livo/commit/cde7f49900639fdf0bc73e41d3afa0146b1f6c92))
+
 # [1.58.0](https://github.com/NikDoe/livo/compare/v1.57.0...v1.58.0) (2024-10-17)
 
 
