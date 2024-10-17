@@ -19,3 +19,8 @@ export const MAP_ZOOM = 4;
 
 //PROFILE CARD
 export const PROFILE_ROUTE = '/profile';
+
+//BOOKINGS VALUES
+export const CLEANING_VALUE = 21;
+export const SERVICE_VALUE = 40;
+export const STAY_DISCOUNT_VALUE = 0.1;
