@@ -127,7 +127,12 @@ async function SingleStayPage({ params }: SingleStayPageProps) {
 							{formatCurrency(price)} / ночь
 						</span>
 					</p>
-					<Rating inPage id={id} fetchRating={fetchStayRating} />
+					<Rating
+						inPage
+						id={id}
+						fetchRating={fetchStayRating}
+						className='mb-4'
+					/>
 					<DynamicBookingWrapper
 						bookings={stayBookings}
 						price={price}
