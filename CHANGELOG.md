@@ -1,3 +1,10 @@
+# [1.63.0](https://github.com/NikDoe/livo/compare/v1.62.0...v1.63.0) (2024-10-18)
+
+
+### Features
+
+* add display of booked housing, cars, hiking trips, and flights ([eaab93b](https://github.com/NikDoe/livo/commit/eaab93ba20d39f91b553a86d4be38a369f788123))
+
 # [1.62.0](https://github.com/NikDoe/livo/compare/v1.61.0...v1.62.0) (2024-10-18)
 
 
