@@ -1,3 +1,10 @@
+# [1.62.0](https://github.com/NikDoe/livo/compare/v1.61.0...v1.62.0) (2024-10-18)
+
+
+### Features
+
+* prevent booking past blocked periods ([4394713](https://github.com/NikDoe/livo/commit/4394713571cbd1d774944c3ecbdde050f9e76a49))
+
 # [1.61.0](https://github.com/NikDoe/livo/compare/v1.60.0...v1.61.0) (2024-10-17)
 
 
