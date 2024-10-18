@@ -54,7 +54,7 @@ export function choosePreposition(phrase: string): string {
 	return `${preposition} ${firstWordCorrected} ${secondWordCorrected} ${words.slice(2).join(' ')}`.toLowerCase();
 }
 
-export function formatRegistrationDate(isoDate: Date): string {
+const formatIsoDate = (isoDate: Date) => {
 	const date = new Date(isoDate);
 
 	const options: Intl.DateTimeFormatOptions = {
@@ -65,6 +65,11 @@ export function formatRegistrationDate(isoDate: Date): string {
 
 	const formattedDate = date.toLocaleDateString('ru-RU', options);
 
+	return formattedDate;
+};
+
+export function formatRegistrationDate(isoDate: Date): string {
+	const formattedDate = formatIsoDate(isoDate);
 	return `Зарегистрирован с ${formattedDate}`;
 }
 
@@ -105,4 +110,7 @@ export function timeSinceCreation(isoDate: Date): string {
 	}
 }
 
-
+export const formatBookingDate = (date: Date) => {
+	const formattedDate = formatIsoDate(date);
+	return formattedDate;
+};

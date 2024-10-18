@@ -27,7 +27,7 @@ async function UserProfile({ params }: UserProfileProps) {
 
 	return (
 		<section className='lg:pt-16'>
-			<div className='z-0 hidden lg:block -mt-16 mx-auto max-w-[1400px]'>
+			<div className='z-0 hidden lg:block -mt-4 mx-auto max-w-[1400px]'>
 				<ImageContainer
 					mainImage='/images/profile_bg.png'
 					name='profile background image'
