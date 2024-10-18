@@ -4,6 +4,7 @@ import db from '@/utils/db';
 import { getAuthUser, renderError } from '../actionHelpers';
 import { calculateTotals } from '@/utils/calculateTotals';
 import { redirect } from 'next/navigation';
+import { revalidatePath } from 'next/cache';
 
 type CreateActionPrevState = {
 	stayId: string;
@@ -78,3 +79,22 @@ export const fetchStayBookings = async () => {
 
 	return bookings;
 };
+
+export async function deleteStayBookingAction(prevState: { bookingId: string }) {
+	const { bookingId } = prevState;
+	const user = await getAuthUser();
+
+	try {
+		const result = await db.stayBooking.delete({
+			where: {
+				id: bookingId,
+				profileId: user.id,
+			},
+		});
+
+		revalidatePath('/bookings');
+		return { message: 'Ваше бронирование было успешно удалено' };
+	} catch (error) {
+		return renderError(error);
+	}
+}
