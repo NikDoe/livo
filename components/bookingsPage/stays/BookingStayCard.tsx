@@ -1,20 +1,21 @@
 import { Rating } from '@/components/mainPages';
 import StayCardAmenities from '@/components/mainPages/staysPage/StayCardAmenities';
 import { Separator } from '@/components/ui/separator';
-import { fetchStayRating } from '@/utils/actions';
+import { deleteStayBookingAction, fetchStayRating } from '@/utils/actions';
 import { STAY_DISCOUNT_VALUE, STAY_TITLE_MAX_LENGTH } from '@/utils/constants';
 import { formatBookingDate, formatCurrency, formatText } from '@/utils/format';
 import type { StayBooking } from '@/utils/types';
 import Image from 'next/image';
 import Link from 'next/link';
+import DeleteBooking from '../DeleteBooking';
 
 type BookingStayCardProps = {
 	booking: StayBooking;
 }
 
 function BookingStayCard({ booking }: BookingStayCardProps) {
-	const { stay, checkIn, checkOut, orderTotal, totalNights } = booking;
-	const { amenities, id, image, stayTitle, price } = stay;
+	const { stay, checkIn, checkOut, orderTotal, totalNights, id: bookingId } = booking;
+	const { amenities, id: stayId, image, stayTitle, price } = stay;
 
 	const title = formatText(stayTitle, STAY_TITLE_MAX_LENGTH);
 	const priceText = formatCurrency(price);
@@ -23,7 +24,7 @@ function BookingStayCard({ booking }: BookingStayCardProps) {
 
 	return (
 		<article className='group relative border rounded-xl'>
-			<Link href={`/stays/${id}`}>
+			<Link href={`/stays/${stayId}`}>
 				<div className='relative h-[300px] overflow-hidden rounded-t-xl'>
 					<Image
 						src={image}
@@ -48,10 +49,16 @@ function BookingStayCard({ booking }: BookingStayCardProps) {
 					<BookingRow label='Количество ночей' value={totalNights.toString()} />
 					<div className='flex justify-between mt-2'>
 						<span className='text-sm font-bold'>Итого: {formatCurrency(orderTotal)}</span>
-						<Rating inPage={false} id={id} fetchRating={fetchStayRating} />
+						<Rating inPage={false} id={stayId} fetchRating={fetchStayRating} />
 					</div>
 				</div>
 			</Link>
+			<div className='absolute top-3 right-3'>
+				<DeleteBooking
+					bookingId={bookingId}
+					deleteAction={deleteStayBookingAction}
+				/>
+			</div>
 		</article>
 	);
 }

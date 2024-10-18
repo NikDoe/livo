@@ -31,4 +31,5 @@ export {
 export {
 	createStayBookingAction,
 	fetchStayBookings,
+	deleteStayBookingAction,
 } from './bookings/stayBookingActions';
