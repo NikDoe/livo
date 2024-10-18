@@ -18,7 +18,7 @@ function AccountPageLayout({ children }: AccountPageLayoutProps) {
 	return (
 		<>
 			<Separator />
-			<div className='container flex flex-col lg:flex-row lg:space-x-24'>
+			<div className='container mt-16 flex flex-col lg:flex-row lg:space-x-24'>
 				<aside className='lg:-mx-4 lg:w-1/5'>
 					<SidebarNav items={accountSidebarNavLinks} />
 				</aside>

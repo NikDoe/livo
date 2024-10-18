@@ -30,4 +30,5 @@ export {
 
 export {
 	createStayBookingAction,
+	fetchStayBookings,
 } from './bookings/stayBookingActions';

@@ -1,15 +1,10 @@
-import { format } from 'date-fns';
-import { ru } from 'date-fns/locale';
+import { formatBookingDate } from '@/utils/format';
 import { CiCalendar } from 'react-icons/ci';
 
 type DateInputProps = {
 	text: string;
 	date: undefined | Date;
 }
-
-const formatBookingDate = (date: Date) => {
-	return format(date, 'LLLL dd, yyyy', { locale: ru });
-};
 
 function DateInput(props: DateInputProps) {
 	const { date, text } = props;

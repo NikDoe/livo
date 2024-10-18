@@ -47,3 +47,34 @@ export const createStayBookingAction = async (prevState: CreateActionPrevState) 
 
 	redirect('/bookings');
 };
+
+export const fetchStayBookings = async () => {
+	const user = await getAuthUser();
+
+	const bookings = await db.stayBooking.findMany({
+		where: {
+			profileId: user.id,
+		},
+		select: {
+			id: true,
+			orderTotal: true,
+			checkIn: true,
+			checkOut: true,
+			totalNights: true,
+			stay: {
+				select: {
+					id: true,
+					stayTitle: true,
+					amenities: true,
+					image: true,
+					price: true,
+				},
+			},
+		},
+		orderBy: {
+			checkIn: 'desc',
+		},
+	});
+
+	return bookings;
+};

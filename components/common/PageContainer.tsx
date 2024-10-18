@@ -13,7 +13,7 @@ function PageContainer(props: PageContainerProps) {
 
 	return (
 		<section className='container'>
-			<div className='flex items-center justify-between mb-16'>
+			<div className='flex items-center justify-between mb-6'>
 				<Button variant='outline' asChild>
 					<Link href='/'>На главную</Link>
 				</Button>

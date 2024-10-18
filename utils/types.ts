@@ -56,3 +56,31 @@ export type Booking = {
     checkIn: Date;
     checkOut: Date;
 };
+
+//BOOKINGS
+export type StayBooking = {
+    id: string;
+    orderTotal: number;
+    totalNights: number;
+    checkIn: Date;
+    checkOut: Date;
+    stay: {
+        id: string;
+        stayTitle: string;
+        image: string;
+        amenities: string;
+        price: number;
+    };
+}
+
+export type FlightBooking = {
+    id: string;
+}
+
+export type CarBooking = {
+    id: string;
+}
+
+export type ExperienceBooking = {
+    id: string;
+}
