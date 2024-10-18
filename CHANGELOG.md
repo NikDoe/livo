@@ -1,3 +1,10 @@
+# [1.64.0](https://github.com/NikDoe/livo/compare/v1.63.0...v1.64.0) (2024-10-18)
+
+
+### Features
+
+* add ability to delete bookings ([4b44397](https://github.com/NikDoe/livo/commit/4b44397d141dc6ce332bba912c5edc7131dc91c9))
+
 # [1.63.0](https://github.com/NikDoe/livo/compare/v1.62.0...v1.63.0) (2024-10-18)
 
 
